@@ -14,6 +14,7 @@ import {
   Rocket,
   HeartHandshake
 } from 'lucide-react';
+import { Button } from '../ui/button';
 
 // Register ScrollTrigger with GSAP
 if (typeof window !== 'undefined') {
@@ -142,13 +143,13 @@ function StatCard({ stat, index }) {
       variants={variants}
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
-      className="bg-black/40 backdrop-blur-md rounded-xl p-6 border border-white/5 shadow-xl relative overflow-hidden group"
+      className="bg-black/40 z-2 backdrop-blur-md rounded-xl p-6 border border-white/5 shadow-xl relative overflow-hidden group"
     >
       {/* Animated gradient background on hover */}
       <div className="absolute inset-0 bg-gradient-to-b opacity-0 group-hover:opacity-10 transition-opacity duration-500 -z-10 bg-gradient-radial"></div>
 
       {/* Icon with animated circle */}
-      <div className="relative mb-4">
+      <div className="relative mb-4 !z-20">
         <div className={`absolute inset-0 rounded-full bg-gradient-to-br ${stat.color} blur-lg opacity-30 group-hover:opacity-60 transition-opacity duration-500`}></div>
         <div className="relative bg-black/60 rounded-full p-3 inline-flex">
           {stat.icon}
@@ -156,7 +157,7 @@ function StatCard({ stat, index }) {
       </div>
 
       {/* Stat number with countup animation */}
-      <div className="mb-2">
+      <div className="mb-2 !opacity-100 z-2">
         <CountUp value={stat.value} suffix={stat.suffix} delay={stat.delay + 0.2} />
       </div>
 
@@ -175,9 +176,9 @@ function StatCard({ stat, index }) {
       <p className="text-white/70 text-sm">{stat.description}</p>
 
       {/* Decorative elements */}
-      <div className="absolute bottom-0 right-0 w-20 h-20 bg-gradient-to-bl from-white/5 to-transparent opacity-20 rounded-tl-full"></div>
-      <div className="absolute top-10 right-10 w-2 h-2 bg-white/20 rounded-full"></div>
-      <div className="absolute bottom-10 left-10 w-3 h-3 bg-white/10 rounded-full"></div>
+      <div className="absolute bottom-0 right-0 w-20 h-20 bg-gradient-to-bl from-white/5 to-transparent opacity-20 rounded-tl-full z-20"></div>
+      <div className="absolute top-10 right-10 w-2 h-2 bg-white/20 rounded-full z-20"></div>
+      <div className="absolute bottom-10 left-10 w-3 h-3 bg-white/10 rounded-full z-20"></div>
     </motion.div>
   );
 }
@@ -205,6 +206,7 @@ export default function StatsSection() {
       gsap.to(".stat-particle", {
         y: -20,
         duration: 2,
+        zIndex: 20,
         ease: "sine.inOut",
         stagger: 0.2,
         repeat: -1,
@@ -218,7 +220,7 @@ export default function StatsSection() {
   return (
     <section
       ref={sectionRef}
-      className="py-5 relative overflow-hidden"
+      className="py-5 relative overflow-hidden z-0"
       id="stats"
     >
       {/* Background elements */}
@@ -226,8 +228,8 @@ export default function StatsSection() {
       <div className="absolute inset-0 bg-gradient-to-b from-black via-black/95 to-black/90"></div>
 
       {/* Decorative elements */}
-      <div className="absolute top-20 left-10 w-32 h-32 bg-mustard/5 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-20 right-10 w-40 h-40 bg-blue-500/5 rounded-full blur-3xl"></div>
+      <div className="absolute top-20 left-10 w-32 h-32 bg-yellow-400/50 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-20 right-10 w-40 h-40 bg-blue-500/50 rounded-full blur-3xl"></div>
 
       {/* Floating particles */}
       <div className="absolute inset-0 pointer-events-none">
@@ -235,18 +237,15 @@ export default function StatsSection() {
         <div className="stat-particle absolute top-[40%] left-[20%] w-3 h-3 bg-blue-400/30 rounded-full"></div>
         <div className="stat-particle absolute top-[10%] right-[30%] w-2 h-2 bg-pink-400/40 rounded-full"></div>
         <div className="stat-particle absolute bottom-[30%] right-[15%] w-4 h-4 bg-teal-400/20 rounded-full"></div>
-        <div className="stat-particle absolute bottom-[10%] left-[40%] w-3 h-3 bg-mustard/30 rounded-full"></div>
+        <div className="stat-particle absolute bottom-[10%] left-[40%] w-3 h-3 bg-yellow-400/60 rounded-full"></div>
       </div>
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container mx-auto px-4 relative">
         {/* Section heading */}
-        <div className="text-center mb-16" ref={headingRef}>
-          <span className="inline-block text-mustard font-medium mb-2">OUR IMPACT</span>
+        <div className="text-center mb-16 z-10 !opacity-100" ref={headingRef}>
+          {/* <span className="inline-block text-mustard font-medium mb-2">OUR IMPACT</span> */}
           <ThreeDText as="h2" className="text-4xl md:text-5xl font-bold mb-6">
-            By The Numbers
+            Our Exprience
           </ThreeDText>
-          <p className="text-white/70 max-w-2xl mx-auto text-lg">
-            Metrics that tell our story of growth, collaboration, and success with clients across industries.
-          </p>
         </div>
 
         {/* Stats grid */}
@@ -267,13 +266,13 @@ export default function StatsSection() {
           <p className="text-white/80 mb-6 max-w-2xl mx-auto">
             Ready to become our next success story? Let's transform your brand together.
           </p>
-          <a
-            href="#contact"
-            className="inline-flex items-center gap-2 bg-gradient-to-r from-mustard to-mustard/80 text-black px-8 py-3 rounded-full font-medium hover:shadow-lg hover:shadow-mustard/20 transition-all duration-300"
+          <Button
+            variant="defaultVariants"
+            className="inline-flex items-center gap-2 bg-gradient-to-r from-yellow-500 to-yellow-500/80 text-black px-8 py-3 rounded-full font-medium hover:shadow-lg hover:shadow-mustard/20 transition-all duration-300"
           >
-            <Rocket className="w-4 h-4" />
+            <Rocket className="w-4 h-4 !opacity-100 z-2" />
             <span>Get Started</span>
-          </a>
+          </Button>
         </motion.div>
       </div>
     </section>
