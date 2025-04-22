@@ -157,7 +157,7 @@ function StatCard({ stat, index }) {
       </div>
 
       {/* Stat number with countup animation */}
-      <div className="mb-2 !opacity-100 z-20">
+      <div className="mb-2 !opacity-100 z-20 text-white/80">
         <CountUp value={stat.value} suffix={stat.suffix} delay={stat.delay + 0.2} />
       </div>
 

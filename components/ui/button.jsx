@@ -18,9 +18,9 @@ const buttonVariants = cva(
           "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
-        mustard: "bg-mustard text-black hover:bg-mustard/90",
-        mustardOutline: "border-2 border-mustard text-mustard hover:bg-mustard/10",
-        "3d": "bg-mustard text-black transform transition-all hover:-translate-y-1 hover:shadow-lg shadow-mustard/30 border-b-4 border-mustard/70 active:border-b-2 active:translate-y-0.5 font-bold",
+        mustard: "bg-yellow-400 text-black hover:bg-yellow-400/90",
+        mustardOutline: "border-2 border-yellow-400 text-yellow-200 hover:bg-yellow-200/10",
+        "3d": "bg-yellow-400 text-black transform transition-all hover:-translate-y-1 hover:shadow-lg shadow-yellow-300/30 border-b-4 border-yellow-300/70 active:border-b-2 active:translate-y-0.5 font-bold",
       },
       size: {
         default: "h-10 px-4 py-2",
@@ -39,11 +39,30 @@ const buttonVariants = cva(
 const Button = React.forwardRef(
   ({ className, variant, size, asChild = false, ...props }, ref) => {
     const Comp = asChild ? Slot : "button"
+
+    const [isMobile, setIsMobile] = React.useState(false);
+
+    // Check if we're on mobile
+    React.useEffect(() => {
+      const checkMobile = () => {
+        setIsMobile(window.innerWidth < 768 || ('ontouchstart' in window));
+      };
+
+      checkMobile();
+      window.addEventListener('resize', checkMobile);
+      return () => window.removeEventListener('resize', checkMobile);
+    }, []);
+
     return (
       <Comp
         className={cn(buttonVariants({ variant, size, className }))}
         ref={ref}
         {...props}
+        {...(isMobile && {
+          onTouchStart: (e) => {
+            if (props.onClick) props.onClick(e);
+          }
+        })}
       />
     )
   }

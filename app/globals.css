@@ -38,7 +38,7 @@ body {
   
   /* Hero Section specific styles for mobile */
   .hero-heading {
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-shadow: 0 0 10px rgba(250, 124, 124, 0.5);
     opacity: 1 !important;
   }
   
