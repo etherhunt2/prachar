@@ -35,7 +35,7 @@ export default function PhilosophySection() {
     const ctx = gsap.context(() => {
       gsap.from(".philosophy-reveal", {
         y: 30,
-        opacity: 0,
+        opacity: 1,
         stagger: 0.15,
         duration: 0.8,
         ease: "power2.out",
@@ -91,7 +91,7 @@ export default function PhilosophySection() {
           <div className="flex flex-col md:flex-row items-center justify-between gap-16">
             <div className="md:w-3/5">
               <div className="mb-8 philosophy-reveal">
-                <span className="inline-block text-mustard font-medium mb-2">OUR PHILOSOPHY</span>
+                <span className="inline-block text-mustard font-medium mb-2 !opacity-100 z-2">OUR PHILOSOPHY</span>
                 <ThreeDText as="h2" className="text-4xl md:text-5xl font-bold mb-6" gradient={false}>
                   We strongly believe:
                 </ThreeDText>
@@ -117,34 +117,9 @@ export default function PhilosophySection() {
                   meaningful connections with your audience and sustainable business growth.
                 </p>
               </div>
-              <div className="mt-8 flex items-center gap-4 philosophy-reveal">
-                <button
-                  onClick={() => setVisualMode('3d')}
-                  className={`px-4 py-2 rounded-md text-sm font-medium transition-all z-10 ${visualMode === '3d'
-                    ? 'bg-mustard text-black'
-                    : 'bg-white/10 text-white/70 hover:bg-white/20 active:bg-white/20'
-                    }`}
-                >
-                  3D Visualization
-                </button>
-                <button
-                  onClick={() => setVisualMode('2d')}
-                  className={`px-4 py-2 rounded-md text-sm font-medium transition-all z-10 ${visualMode === '2d'
-                    ? 'bg-mustard text-black'
-                    : 'bg-white/10 text-white/70 hover:bg-white/20 active:bg-white/20'
-                    }`}
-                >
-                  2D Animation
-                </button>
-              </div>
             </div>
 
             <div className="relative w-full h-80 md:h-96 md:w-3/5 philosophy-reveal">
-              {/* {visualMode === '3d' ? (
-                <Philosophy3DModel />
-              ) : (
-                <Philosophy2DAnimation />
-              )} */}
               <Philosophy2DAnimation />
             </div>
           </div>

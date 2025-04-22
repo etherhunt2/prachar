@@ -143,7 +143,7 @@ function StatCard({ stat, index }) {
       variants={variants}
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
-      className="bg-black/40 z-2 backdrop-blur-md rounded-xl p-6 border border-white/5 shadow-xl relative overflow-hidden group"
+      className="bg-black/40 z-0 backdrop-blur-md rounded-xl p-6 border border-white/5 shadow-xl relative overflow-hidden group"
     >
       {/* Animated gradient background on hover */}
       <div className="absolute inset-0 bg-gradient-to-b opacity-0 group-hover:opacity-10 transition-opacity duration-500 -z-10 bg-gradient-radial"></div>
@@ -157,7 +157,7 @@ function StatCard({ stat, index }) {
       </div>
 
       {/* Stat number with countup animation */}
-      <div className="mb-2 !opacity-100 z-2">
+      <div className="mb-2 !opacity-100 z-20">
         <CountUp value={stat.value} suffix={stat.suffix} delay={stat.delay + 0.2} />
       </div>
 

@@ -49,6 +49,7 @@ export function Philosophy2DAnimation() {
         duration: 3,
         repeat: -1,
         yoyo: true,
+        opacity: 1,
         ease: "power1.inOut"
       });
 
@@ -90,6 +91,7 @@ export function Philosophy2DAnimation() {
           duration: 1.5,
           repeat: -1,
           yoyo: true,
+          backgroundColor: "pink",
           ease: "power1.inOut"
         });
       }
@@ -143,7 +145,7 @@ export function Philosophy2DAnimation() {
             ref={heartRef}
             className="w-24 h-24 bg-zinc-800 rounded-full flex items-center justify-center"
           >
-            <svg className="w-16 h-16 text-mustard" viewBox="0 0 24 24" fill="currentColor">
+            <svg className="w-16 h-16 text-pink-500" viewBox="0 0 24 24" fill="currentColor">
               <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
             </svg>
           </div>
@@ -161,7 +163,8 @@ export function Philosophy2DAnimation() {
             height: `${particle.height}px`,
             top: `${particle.top}%`,
             left: `${particle.left}%`,
-            opacity: particle.opacity
+            opacity: particle.opacity,
+            zIndex: 10
           }}
         ></div>
       ))}
@@ -178,7 +181,8 @@ export function Philosophy2DAnimation() {
             top: `${element.top}%`,
             left: `${element.left}%`,
             transform: `rotate(${element.rotation}deg)`,
-            opacity: element.opacity
+            opacity: element.opacity,
+            zIndex: 10
           }}
         ></div>
       ))}
@@ -196,15 +200,15 @@ export function Philosophy2DAnimation() {
       {/* Philosophy text */}
       <div
         ref={textRef}
-        className="absolute top-1/4 left-1/2 transform -translate-x-1/2 w-full max-w-md px-4 text-center"
+        className="absolute top-0 md:top-1/4 left-1/2 transform -translate-x-1/2 w-full max-w-md px-4 text-center"
       >
         <h3 className="text-xl font-bold text-white mb-2">Not fancy packaging. Genuine value.</h3>
-        <p className="text-mustard text-lg mb-4">Driving real results for your business</p>
+        <p className="text-yellow-400 text-lg mb-4">Driving real results for your business</p>
       </div>
 
       {/* Subtle animated elements - using fixed positions */}
-      <div className="absolute top-1/3 left-1/4 w-2 h-2 bg-zinc-800 rounded-full animate-pulse"></div>
-      <div className="absolute top-2/3 right-1/4 w-3 h-3 bg-green-500/30 rounded-full animate-ping"></div>
+      <div className="absolute top-1/3 left-1/4 w-2 h-2 bg-zinc-800 rounded-full animate-pulse z-100"></div>
+      <div className="absolute top-2/3 right-1/4 w-3 h-3 bg-green-500/30 rounded-full animate-ping z-100"></div>
     </motion.div>
   );
 }
