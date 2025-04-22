@@ -224,7 +224,7 @@ export default function HeroSection() {
           >
             <ThreeDText
               elementType="h1"
-              className="text-4xl sm:text-5xl md:text-7xl font-extrabold hero-heading"
+              className="text-4xl sm:text-5xl md:text-7xl font-extrabold hero-heading !opacity-100"
             >
               Rekindle Your WHY
             </ThreeDText>
@@ -236,7 +236,7 @@ export default function HeroSection() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="mb-8"
           >
-            <p className="text-lg sm:text-xl md:text-2xl text-white/80 max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl md:text-2xl text-white max-w-3xl mx-auto font-medium">
               We are the agency that wants to bring you closer to the story of why you started your
               business in the first place.
             </p>
@@ -248,10 +248,10 @@ export default function HeroSection() {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
-            <Button variant="mustardOutline" size="lg" className="cursor-pointer rounded-full px-8 py-6 text-lg">
+            <Button variant="3d" size="lg" className="cursor-pointer rounded-full px-8 py-6 text-lg font-bold">
               Our Services
             </Button>
-            <Button variant="mustardOutline" size="lg" className="cursor-pointer rounded-full px-8 py-6 text-lg">
+            <Button variant="3d" size="lg" className="cursor-pointer rounded-full px-8 py-6 text-lg font-bold">
               Contact Us
             </Button>
           </motion.div>
@@ -262,6 +262,7 @@ export default function HeroSection() {
           animate={{ opacity: 1 }}
           transition={{ delay: 1.2, duration: 0.8 }}
           style={STYLES.scrollIndicator}
+          className="z-20"
         >
           <motion.div
             animate={{ y: [0, 8, 0] }}
@@ -269,7 +270,7 @@ export default function HeroSection() {
             className="flex flex-col items-center cursor-pointer"
           >
             <div className="mb-0">
-              <div style={STYLES.scrollCircle}>
+              <div className="w-14 h-14 rounded-full border-2 border-mustard flex flex-col items-center justify-center gap-1 bg-black backdrop-blur-md">
                 <svg
                   width="24"
                   height="24"
@@ -281,7 +282,7 @@ export default function HeroSection() {
                   <path
                     d="M12 5V19M12 19L19 12M12 19L5 12"
                     stroke="currentColor"
-                    strokeWidth="2"
+                    strokeWidth="3"
                     strokeLinecap="round"
                     strokeLinejoin="round"
                   />

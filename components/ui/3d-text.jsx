@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { cn } from '@/lib/utils';
 import { motion } from 'framer-motion';
 
@@ -11,6 +11,19 @@ export function ThreeDText({
   color = "mustard", // New prop for color customization
   depth = "medium", // New prop for 3D depth: "light", "medium", "heavy"
 }) {
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Check if we're on mobile
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768 || ('ontouchstart' in window));
+    };
+
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
   // Enhanced text styling with new color options
   const baseClass = `relative font-extrabold tracking-tight ${gradient ? 'gradient-text' : 'text-white'
     } hero-heading`;
@@ -18,22 +31,38 @@ export function ThreeDText({
   // Enhanced 3D text shadow based on depth
   const getShadowStyle = () => {
     const shadowColor = gradient
-      ? 'rgba(0,0,0,0.3)'
+      ? 'rgba(0,0,0,0.5)'
       : color === "mustard"
-        ? 'rgba(255,219,88,0.3)'
+        ? 'rgba(255,219,88,0.5)'
         : color === "blue"
-          ? 'rgba(96,165,250,0.3)'
-          : 'rgba(255,255,255,0.3)';
+          ? 'rgba(96,165,250,0.5)'
+          : 'rgba(255,255,255,0.5)';
 
     const highlightColor = gradient
-      ? 'rgba(255,255,255,0.1)'
+      ? 'rgba(255,255,255,0.2)'
       : color === "mustard"
-        ? 'rgba(255,235,156,0.15)'
+        ? 'rgba(255,235,156,0.25)'
         : color === "blue"
-          ? 'rgba(191,219,254,0.15)'
-          : 'rgba(255,255,255,0.15)';
+          ? 'rgba(191,219,254,0.25)'
+          : 'rgba(255,255,255,0.25)';
 
-    // Different shadow depths
+    // Use heavier shadows for mobile
+    if (isMobile) {
+      return {
+        textShadow: `
+          0px 2px 3px ${shadowColor},
+          0px 4px 6px ${shadowColor},
+          0px 6px 10px ${shadowColor},
+          2px 2px 0px ${highlightColor},
+          -2px -2px 1px rgba(0,0,0,0.2)
+        `,
+        opacity: 1,
+        color: gradient ? 'white' : (color === "mustard" ? '#f0c850' : 'white'),
+        WebkitTextFillColor: gradient ? 'white' : (color === "mustard" ? '#f0c850' : 'white'),
+      };
+    }
+
+    // Different shadow depths for desktop
     if (depth === "light") {
       return {
         textShadow: `
@@ -107,13 +136,13 @@ export function ThreeDText({
             style={{
               ...getShadowStyle(),
               // Add subtle text stroke for extra definition
-              WebkitTextStroke: gradient ? '0.2px rgba(255,255,255,0.1)' : 'none',
+              WebkitTextStroke: gradient ? '0.5px rgba(255,255,255,0.2)' : 'none',
             }}
           >
             {children}
 
             {/* Optional highlight overlay for enhanced 3D effect */}
-            {depth === "heavy" && (
+            {(depth === "heavy" || isMobile) && (
               <span className="absolute inset-0 bg-gradient-to-b from-white/10 to-transparent mix-blend-overlay pointer-events-none"
                 aria-hidden="true"></span>
             )}
@@ -126,12 +155,15 @@ export function ThreeDText({
   return (
     <Component
       className={cn(baseClass, className)}
-      style={getShadowStyle()}
+      style={{
+        ...getShadowStyle(),
+        WebkitTextStroke: gradient ? '0.5px rgba(255,255,255,0.2)' : 'none',
+      }}
     >
       {children}
 
       {/* Optional highlight overlay for enhanced 3D effect */}
-      {depth === "heavy" && (
+      {(depth === "heavy" || isMobile) && (
         <span className="absolute inset-0 bg-gradient-to-b from-white/10 to-transparent mix-blend-overlay pointer-events-none"
           aria-hidden="true"></span>
       )}

@@ -20,7 +20,7 @@ const buttonVariants = cva(
         link: "text-primary underline-offset-4 hover:underline",
         mustard: "bg-mustard text-black hover:bg-mustard/90",
         mustardOutline: "border-2 border-mustard text-mustard hover:bg-mustard/10",
-        "3d": "bg-mustard text-black transform transition-all hover:-translate-y-1 hover:shadow-lg shadow-mustard/30 border-b-4 border-mustard/70 active:border-b-2 active:translate-y-0.5",
+        "3d": "bg-mustard text-black transform transition-all hover:-translate-y-1 hover:shadow-lg shadow-mustard/30 border-b-4 border-mustard/70 active:border-b-2 active:translate-y-0.5 font-bold",
       },
       size: {
         default: "h-10 px-4 py-2",

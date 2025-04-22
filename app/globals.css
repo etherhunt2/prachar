@@ -35,4 +35,43 @@ body {
   .group:active .group-active\:bg-opacity-20 {
     --tw-bg-opacity: 0.2;
   }
+  
+  /* Hero Section specific styles for mobile */
+  .hero-heading {
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    opacity: 1 !important;
+  }
+  
+  /* Enhance 3D button visibility on mobile */
+  .bg-mustard {
+    --tw-bg-opacity: 1 !important;
+    background-color: rgb(240 200 80 / var(--tw-bg-opacity)) !important;
+  }
+  
+  /* Ensure text is fully visible */
+  .text-white, .text-white\/80 {
+    color: white !important;
+  }
+  
+  /* Fix z-index and overlay issues for mobile */
+  .z-10 {
+    z-index: 10 !important;
+  }
+  
+  .z-20 {
+    z-index: 20 !important;
+  }
+  
+  /* Enhance button visibility on mobile */
+  [class*="rounded-full"] {
+    border: 2px solid rgb(240 200 80) !important;
+  }
+  
+  /* Ensure shadow and 3D effects are visible */
+  .shadow-mustard\/30 {
+    --tw-shadow-color: rgb(240 200 80 / 0.5) !important;
+    --tw-shadow: var(--tw-shadow-colored) !important;
+    box-shadow: 0 4px 6px -1px rgb(240 200 80 / 0.5), 
+                0 2px 4px -2px rgb(240 200 80 / 0.5) !important;
+  }
 }
