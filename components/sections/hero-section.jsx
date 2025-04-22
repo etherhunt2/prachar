@@ -246,7 +246,7 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center z-2"
+            className="flex flex-col sm:flex-row gap-4 justify-center z-20"
           >
             <Button variant="3d" size="lg" className="cursor-pointer rounded-full px-8 py-6 text-lg font-bold">
               Our Services
