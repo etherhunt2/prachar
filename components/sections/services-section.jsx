@@ -206,6 +206,7 @@ export default function ServicesSection() {
                       e.stopPropagation(); // Stop event from bubbling up to the card
                       console.log(`Learn more about ${service.title}`);
                       // Navigate or show more info
+                      window.location.href = '/services';
                     }}
                   >
                     Learn More
@@ -233,6 +234,7 @@ export default function ServicesSection() {
           <Button
             variant="mustard"
             size="lg"
+            onClick={() => window.location.href = '/services'}
             className="rounded-full px-8 z-2 text-white/70 hover:text-black/70 bg-blue-200/50 hover:bg-blue-300/70 transition-all duration-300 ease-in-out"
           >
             View More
