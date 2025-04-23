@@ -64,9 +64,9 @@ export default function TeamSection() {
     window.addEventListener('resize', checkMobile);
 
     const handleTouchStart = (e) => {
-      const cardElement = e.target.closest('.service-card');
+      const cardElement = e.target.closest('.team-card');
       if (cardElement) {
-        const cardId = cardElement.getAttribute('data-id');
+        const cardId = parseInt(cardElement.getAttribute('data-id'));
         setTouchedCard(cardId);
       }
     };
@@ -125,12 +125,25 @@ export default function TeamSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="relative h-80 rounded-xl overflow-hidden perspective-800"
+              className="relative h-80 rounded-xl overflow-hidden perspective-800 team-card border border-white/5 hover:border-mustard/30 active:border-mustard/30"
+              data-id={member.id}
+              data-active={touchedCard === member.id}
+              whileHover={{
+                boxShadow: '0 10px 25px rgba(255, 219, 88, 0.15)',
+                borderColor: 'rgba(255, 219, 88, 0.3)',
+                transition: { duration: 0.3 }
+              }}
+              whileTap={{
+                boxShadow: '0 10px 25px rgba(255, 219, 88, 0.15)',
+                borderColor: 'rgba(255, 219, 88, 0.3)',
+                transition: { duration: 0.3 }
+              }}
             >
               <motion.div
                 initial="initial"
                 whileHover="hover"
-                animate="initial"
+                whileTap="hover"
+                animate={touchedCard === member.id ? "hover" : "initial"}
                 className={`${isCardActive(member.id)} relative w-full h-full`}
               >
                 <motion.div
@@ -150,7 +163,7 @@ export default function TeamSection() {
                 </motion.div>
 
                 <motion.div
-                  className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent flex items-end p-6"
+                  className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent flex items-end p-6 team-overlay overlay-gradient"
                   variants={overlayVariants}
                 >
                   <div>

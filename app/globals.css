@@ -94,6 +94,49 @@ body {
     color: rgb(253 230 138); /* amber-200 color */
   }
   
+  /* Team member card styles for mobile touch devices */
+  .active-card {
+    box-shadow: 0 15px 30px rgba(255, 219, 88, 0.2);
+    border: 1px solid rgba(255, 219, 88, 0.3);
+  }
+  
+  .active-card img {
+    transform: scale(1.05) !important;
+    transition: transform 0.3s ease !important;
+  }
+  
+  .active-card .overlay-gradient {
+    opacity: 1 !important;
+    transition: opacity 0.3s ease !important;
+  }
+  
+  /* Team member hover effects for touch devices */
+  @media (hover: none) {
+    /* Show gradient overlay on touch */
+    [data-active="true"] .team-overlay {
+      opacity: 1 !important;
+    }
+    
+    /* Scale image on touch */
+    [data-active="true"] img {
+      transform: scale(1.05);
+    }
+    
+    /* Default state for team cards on mobile to always show some info */
+    .team-card .team-overlay {
+      opacity: 0.95;
+      background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.4) 60%, transparent 100%);
+    }
+    
+    /* Active card gets special styling */
+    .team-card[data-active="true"] {
+      transform: scale(1.02);
+      z-index: 5;
+      border-color: rgba(255, 219, 88, 0.4) !important;
+      box-shadow: 0 10px 30px rgba(255, 219, 88, 0.2) !important;
+    }
+  }
+  
   /* Fix pointer events for buttons in cards */
   .service-card button {
     position: relative;
