@@ -3,12 +3,6 @@
 import { useState } from "react";
 import Image from "next/image";
 import { motion } from 'framer-motion';
-import {
-    Dialog,
-    DialogContent,
-    DialogTitle,
-    DialogHeader
-} from "@/components/ui/dialog";
 import { ThreeDText } from "../ui/3d-text";
 
 import ias from '@/public/Portfolio/ias.jpg'
