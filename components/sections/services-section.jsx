@@ -23,7 +23,7 @@ const services = [
     id: 'videography',
     title: 'Videography',
     subtitle: 'Your Brand Deserves More Than Just Another Video',
-    description: `Let’s cut to the chase—everyone’s making videos, but not everyone’s making good ones. That’s where Prachar steps in. If you think a video is just about hitting record, think again...`,
+    description: `Let's cut to the chase—everyone's making videos, but not everyone's making good ones. That's where Prachar steps in. If you think a video is just about hitting record, think again...`,
     icon: 'Video',
     image: videography,
   },
@@ -31,7 +31,7 @@ const services = [
     id: 'photography',
     title: 'Photography',
     subtitle: 'Photography That Speaks Louder Than Words',
-    description: `A good photo captures a moment. A great photo creates a story. At Prachar, we don’t just click pictures—we craft visual narratives that make people stop, stare, and feel...`,
+    description: `A good photo captures a moment. A great photo creates a story. At Prachar, we don't just click pictures—we craft visual narratives that make people stop, stare, and feel...`,
     icon: 'Camera',
     image: 'https://images.unsplash.com/photo-1542038784456-1ea8e935640e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
   },
@@ -39,7 +39,7 @@ const services = [
     id: 'seo',
     title: 'Search Engine Optimization',
     subtitle: 'SEO That Gets You Found, Not Forgotten',
-    description: `Having a website without SEO is like opening a store in the middle of nowhere and expecting a crowd. At Prachar, we make sure your brand isn’t just present online—it’s...`,
+    description: `Having a website without SEO is like opening a store in the middle of nowhere and expecting a crowd. At Prachar, we make sure your brand isn't just present online—it's...`,
     icon: 'SEO',
     image: 'https://images.unsplash.com/photo-1562577309-4932fdd64cd1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
   },
@@ -47,7 +47,7 @@ const services = [
     id: 'ads',
     title: 'Ad Management',
     subtitle: 'Ad Management That Spends Smart, Not Just Spends',
-    description: `Running ads isn’t rocket science—running ads that actually convert is. At Prachar, we don’t believe in throwing money at Meta and Google....`,
+    description: `Running ads isn't rocket science—running ads that actually convert is. At Prachar, we don't believe in throwing money at Meta and Google....`,
     icon: 'Ads',
     image: adsImage,
   },
@@ -55,7 +55,7 @@ const services = [
     id: 'social',
     title: 'Social Media Management',
     subtitle: 'Social Media That Sells, Not Just Scrolls',
-    description: `Posting pretty pictures and hoping for the best? That’s not a strategy—that’s wishful thinking. At Prachar, we don’t just manage social media;...`,
+    description: `Posting pretty pictures and hoping for the best? That's not a strategy—that's wishful thinking. At Prachar, we don't just manage social media;...`,
     icon: 'SocialMedia',
     image: socialImage,
   },
@@ -63,7 +63,7 @@ const services = [
     id: 'webDev',
     title: 'Website Development',
     subtitle: 'Website Development That Works, Not Just Looks Good',
-    description: `A website isn’t just a digital business card—it’s your 24/7 sales machine. At Prachar, we don’t just build websites;...`,
+    description: `A website isn't just a digital business card—it's your 24/7 sales machine. At Prachar, we don't just build websites;...`,
     icon: 'WebDesign',
     image: webDevImage,
   },
@@ -166,8 +166,10 @@ export default function ServicesSection() {
           {services.map((service) => (
             <motion.div
               key={service.id}
-              className={`service-card ${isCardActive(service.id)} rounded-xl overflow-hidden transition-all duration-500 group h-full flex flex-col`}
+              data-id={service.id}
+              className={`service-card ${isCardActive(service.id)} rounded-xl overflow-hidden transition-all duration-500 group h-full flex flex-col border border-white/5 hover:border-mustard/30 active:border-mustard/30`}
               whileHover={{ boxShadow: '0 15px 30px rgba(255, 219, 88, 0.15)', scale: 1.02, transition: { duration: 0.3 } }}
+              whileTap={{ boxShadow: '0 15px 30px rgba(255, 219, 88, 0.15)', scale: 1.02, transition: { duration: 0.3 } }}
             >
               <div className="relative h-48 overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-b from-black/0 to-black/80 z-10"></div>
@@ -175,7 +177,7 @@ export default function ServicesSection() {
                   src={service.image}
                   alt={service.title}
                   fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-110"
+                  className="object-cover transition-transform duration-700 group-hover:scale-110 group-active:scale-110"
                 />
 
                 <div className="absolute top-4 right-4 z-20 w-12 h-12 bg-mustard/90 backdrop-blur-sm rounded-full flex items-center justify-center text-black">
@@ -184,7 +186,7 @@ export default function ServicesSection() {
               </div>
 
               <div className="p-6 bg-black/80 backdrop-blur-lg flex-grow border-t border-mustard/20">
-                <h3 className="text-2xl font-bold mb-2 text-white group-hover:text-amber-200 transition-colors">
+                <h3 className="text-2xl font-bold mb-2 text-white group-hover:text-amber-200 group-active:text-amber-200 transition-colors">
                   {service.title}
                 </h3>
 
@@ -196,10 +198,15 @@ export default function ServicesSection() {
                   {service.description}
                 </p>
 
-                <div className="mt-auto">
+                <div className="mt-auto relative z-30">
                   <Button
                     variant="outline"
-                    className="rounded-full border-x-amber-200/50 text-yellow-300 hover:bg-emerald-600/70 hover:text-red-800 transition-all w-full"
+                    className="rounded-full border-x-amber-200/50 text-yellow-300 hover:bg-emerald-600/70 hover:text-red-800 active:bg-emerald-600/70 active:text-red-800 transition-all w-full relative z-30"
+                    onClick={(e) => {
+                      e.stopPropagation(); // Stop event from bubbling up to the card
+                      console.log(`Learn more about ${service.title}`);
+                      // Navigate or show more info
+                    }}
                   >
                     Learn More
                   </Button>

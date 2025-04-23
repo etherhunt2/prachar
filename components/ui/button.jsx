@@ -13,13 +13,13 @@ const buttonVariants = cva(
         destructive:
           "bg-destructive text-destructive-foreground hover:bg-destructive/90",
         outline:
-          "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
+          "border border-input bg-background hover:bg-accent hover:text-accent-foreground active:bg-accent active:text-accent-foreground",
         secondary:
           "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
-        mustard: "bg-yellow-400 text-black hover:bg-yellow-400/90",
-        mustardOutline: "border-2 border-yellow-400 text-yellow-200 hover:bg-yellow-200/10",
+        mustard: "bg-yellow-400 text-black hover:bg-yellow-400/90 active:bg-yellow-500",
+        mustardOutline: "border-2 border-yellow-400 text-yellow-200 hover:bg-yellow-200/10 active:bg-yellow-200/20",
         "3d": "bg-yellow-400 text-black transform transition-all hover:-translate-y-1 hover:shadow-lg shadow-yellow-300/30 border-b-4 border-yellow-300/70 active:border-b-2 active:translate-y-0.5 font-bold",
       },
       size: {
@@ -55,14 +55,10 @@ const Button = React.forwardRef(
 
     return (
       <Comp
-        className={cn(buttonVariants({ variant, size, className }))}
+        className={cn(buttonVariants({ variant, size, className }), "touch-manipulation")}
         ref={ref}
+        style={{ WebkitTapHighlightColor: 'transparent' }}
         {...props}
-        {...(isMobile && {
-          onTouchStart: (e) => {
-            if (props.onClick) props.onClick(e);
-          }
-        })}
       />
     )
   }
