@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
@@ -11,11 +11,13 @@ import r from '@/public/Images/rahul.jpg';
 // Example team members
 const teamMembers = [
   {
+    id: 1,
     name: 'Aditi Sharma',
     role: 'Co-Founder, Prachar',
     image: aditi,
   },
   {
+    id: 2,
     name: 'Rahul Kareer',
     role: 'Co-Founder, Prachar',
     image: r,
@@ -46,6 +48,49 @@ const overlayVariants = {
 };
 
 export default function TeamSection() {
+  const [isMobile, setIsMobile] = useState(false);
+  const [touchedCard, setTouchedCard] = useState(null);
+
+  const isCardActive = (cardId) => {
+    return touchedCard === cardId ? 'active-card' : '';
+  };
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768 || ('ontouchstart' in window));
+    };
+
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+
+    const handleTouchStart = (e) => {
+      const cardElement = e.target.closest('.service-card');
+      if (cardElement) {
+        const cardId = cardElement.getAttribute('data-id');
+        setTouchedCard(cardId);
+      }
+    };
+
+    const handleTouchEnd = () => {
+      setTimeout(() => {
+        setTouchedCard(null);
+      }, 300);
+    };
+
+    if (isMobile) {
+      document.addEventListener('touchstart', handleTouchStart, { passive: true });
+      document.addEventListener('touchend', handleTouchEnd, { passive: true });
+    }
+
+    return () => {
+      window.removeEventListener('resize', checkMobile);
+      if (isMobile) {
+        document.removeEventListener('touchstart', handleTouchStart);
+        document.removeEventListener('touchend', handleTouchEnd);
+      }
+    };
+  }, [isMobile]);
+
   return (
     <section className="relative py-20 bg-black">
       {/* Background grid pattern */}
@@ -75,7 +120,7 @@ export default function TeamSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {teamMembers.map((member, index) => (
             <motion.div
-              key={member.name}
+              key={member.id}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -86,10 +131,10 @@ export default function TeamSection() {
                 initial="initial"
                 whileHover="hover"
                 animate="initial"
-                className="relative w-full h-full"
+                className={`${isCardActive(member.id)} relative w-full h-full`}
               >
                 <motion.div
-                  className="absolute inset-0"
+                  className={`absolute inset-0`}
                   variants={imageVariants}
                 >
                   <div className="relative h-80 w-full">
@@ -129,8 +174,8 @@ export default function TeamSection() {
               With decades of combined experience in digital marketing, content creation, and brand development, our team is ready to take your business to the next level.
             </p>
 
-            <Button variant="green" size="lg" className="rounded-full">
-              Meet the Full Team
+            <Button variant="mustard" size="lg" className="rounded-full" onClick={() => window.location.href = '/team'}>
+              Meet Our Team
             </Button>
           </motion.div>
         </div>

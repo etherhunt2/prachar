@@ -80,7 +80,7 @@ const ImageGallery = () => {
                                     src={image.src}
                                     alt={image.alt}
                                     fill
-                                    className="z-0 object-cover transition-transform duration-300 group-hover:scale-110 group-active:scale-110"
+                                    className="z-1 object-cover transition-transform duration-300 group-hover:scale-110 group-active:scale-110"
                                 />
                                 <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 group-active:bg-opacity-20 transition-opacity duration-300"></div>
                             </div>
@@ -96,7 +96,7 @@ const ImageGallery = () => {
                             </DialogTitle>
                         </DialogHeader>
                         {selectedImage && (
-                            <div className="relative w-full aspect-auto z-10">
+                            <div className="relative w-full aspect-auto z-1">
                                 <Image
                                     src={selectedImage.src}
                                     alt={selectedImage.alt}

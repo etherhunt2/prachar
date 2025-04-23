@@ -47,7 +47,7 @@ const services = [
     id: 'ads',
     title: 'Ad Management',
     subtitle: 'Ad Management That Spends Smart, Not Just Spends',
-    description: `Running ads isn’t rocket science—running ads that actually convert is. At Prachar, we don’t believe in throwing money at Meta and Google, crossing our fingers, and hoping for the best....`,
+    description: `Running ads isn’t rocket science—running ads that actually convert is. At Prachar, we don’t believe in throwing money at Meta and Google....`,
     icon: 'Ads',
     image: adsImage,
   },
@@ -71,12 +71,53 @@ const services = [
 
 export default function ServicesSection() {
   const containerRef = useRef(null);
+  const [isMobile, setIsMobile] = useState(false);
+  const [touchedCard, setTouchedCard] = useState(null);
+
+  const isCardActive = (cardId) => {
+    return touchedCard === cardId ? 'active-card' : '';
+  };
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768 || ('ontouchstart' in window));
+    };
+
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+
+    const handleTouchStart = (e) => {
+      const cardElement = e.target.closest('.service-card');
+      if (cardElement) {
+        const cardId = cardElement.getAttribute('data-id');
+        setTouchedCard(cardId);
+      }
+    };
+
+    const handleTouchEnd = () => {
+      setTimeout(() => {
+        setTouchedCard(null);
+      }, 300);
+    };
+
+    if (isMobile) {
+      document.addEventListener('touchstart', handleTouchStart, { passive: true });
+      document.addEventListener('touchend', handleTouchEnd, { passive: true });
+    }
+
+    return () => {
+      window.removeEventListener('resize', checkMobile);
+      if (isMobile) {
+        document.removeEventListener('touchstart', handleTouchStart);
+        document.removeEventListener('touchend', handleTouchEnd);
+      }
+    };
+  }, [isMobile]);
 
   useEffect(() => {
     if (!containerRef.current) return;
 
     const ctx = gsap.context(() => {
-      // रिवील एनिमेशन - सर्विस कार्ड्स के लिए
       gsap.from('.service-card', {
         y: 100,
         opacity: 1,
@@ -101,7 +142,6 @@ export default function ServicesSection() {
     >
       <div className="absolute inset-0 bg-gradient-to-b from-black via-black/95 to-black/90 z-0"></div>
 
-      {/* सेक्शन हेडिंग */}
       <div className="relative z-1 container mx-auto px-4">
         <div className="text-center mb-16">
           <motion.div
@@ -122,15 +162,13 @@ export default function ServicesSection() {
           </motion.div>
         </div>
 
-        {/* सर्विस कार्ड ग्रिड */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16 z-1">
-          {services.map((service, index) => (
+          {services.map((service) => (
             <motion.div
               key={service.id}
-              className="service-card rounded-xl overflow-hidden transition-all duration-500 group h-full flex flex-col"
+              className={`service-card ${isCardActive(service.id)} rounded-xl overflow-hidden transition-all duration-500 group h-full flex flex-col`}
               whileHover={{ boxShadow: '0 15px 30px rgba(255, 219, 88, 0.15)', scale: 1.02, transition: { duration: 0.3 } }}
             >
-              {/* सर्विस इमेज */}
               <div className="relative h-48 overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-b from-black/0 to-black/80 z-10"></div>
                 <Image
@@ -140,13 +178,11 @@ export default function ServicesSection() {
                   className="object-cover transition-transform duration-700 group-hover:scale-110"
                 />
 
-                {/* आइकन */}
                 <div className="absolute top-4 right-4 z-20 w-12 h-12 bg-mustard/90 backdrop-blur-sm rounded-full flex items-center justify-center text-black">
                   {React.createElement(MarketingIcons[service.icon], { size: 20 })}
                 </div>
               </div>
 
-              {/* सर्विस कंटेंट */}
               <div className="p-6 bg-black/80 backdrop-blur-lg flex-grow border-t border-mustard/20">
                 <h3 className="text-2xl font-bold mb-2 text-white group-hover:text-amber-200 transition-colors">
                   {service.title}
@@ -173,7 +209,6 @@ export default function ServicesSection() {
           ))}
         </div>
 
-        {/* अतिरिक्त सेवा सेक्शन */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -197,8 +232,7 @@ export default function ServicesSection() {
           </Button>
         </motion.div>
       </div>
-
-      {/* सजावटी तत्व */}
+      {/*Decoration Element*/}
       <div className="absolute bottom-10 right-10 w-32 h-32 rounded-full border-2 border-amber-500 opacity-30 z-2 animate-rotate"></div>
       <div className="absolute top-10 left-10 w-16 h-16 rounded-md border-2 border-white/10 opacity-20 animate-float z-20"></div>
     </section>

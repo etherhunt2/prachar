@@ -1,15 +1,13 @@
 'use client';
 
 import React, { useEffect, useRef, useState } from 'react';
-import { motion, useInView, useAnimation } from 'framer-motion';
+import { motion, useInView } from 'framer-motion';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ThreeDText } from '@/components/ui/3d-text';
 import {
   Users,
   Briefcase,
-  Sparkles,
-  BarChart4,
   Award,
   Rocket,
   HeartHandshake
@@ -64,7 +62,6 @@ const stats = [
 function CountUp({ value, suffix = '', duration = 2, delay = 0 }) {
   const [count, setCount] = useState(0);
   const countRef = useRef(null);
-  const controls = useAnimation();
   const isInView = useInView(countRef, { once: true });
 
   useEffect(() => {
@@ -220,7 +217,7 @@ export default function StatsSection() {
   return (
     <section
       ref={sectionRef}
-      className="py-5 relative overflow-hidden z-0"
+      className="py-5 relative overflow-hidden z-0 h-full"
       id="stats"
     >
       {/* Background elements */}
