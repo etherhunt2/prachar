@@ -155,9 +155,9 @@ export default function TeamSection() {
                       src={member.image}
                       alt={member.name}
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
-                      className="object-fill"
-                      width={500}  /* Add width property */
-                      height={500} /* Add height property */
+                      className="object-cover w-full h-full inset-0"
+                      width={500}
+                      height={500}
                     />
                   </div>
                 </motion.div>

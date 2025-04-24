@@ -7,7 +7,6 @@ import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin } from 'luc
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import logo from '@/public/mainlogo_.png';
-import { LogOut } from 'lucide-react';
 
 const footerLinks = [
   {
@@ -16,6 +15,7 @@ const footerLinks = [
       { label: 'About', href: '/about' },
       { label: 'Services', href: '/services' },
       { label: 'Team', href: '/team' },
+      { label: 'Portfolio', href: '/portfolio' }
     ],
   },
   {
@@ -139,14 +139,14 @@ export default function Footer() {
               <li className="flex items-start space-x-3">
                 <MapPin size={20} className="text-mustard mt-1 flex-shrink-0" />
                 <span className="text-white/70">
-                  123 Digital Avenue, <br />
-                  Marketing District, <br />
-                  New Delhi, 110001
+                  Olympus Mons, <br />
+                  Mars, Sun <br />
+                  Milky Way, KBC Void
                 </span>
               </li>
               <li className="flex items-center space-x-3">
                 <Phone size={20} className="text-mustard flex-shrink-0" />
-                <span className="text-white/70">+91 (123) 456-7890</span>
+                <span className="text-white/70">+917973825465</span>
               </li>
               <li className="flex items-center space-x-3">
                 <Mail size={20} className="text-mustard flex-shrink-0" />

@@ -27,7 +27,6 @@ const fixedIcons = [
 export default function PhilosophySection() {
   const containerRef = useRef(null);
   const textRef = useRef(null);
-  const [visualMode, setVisualMode] = useState('3d');
 
   useEffect(() => {
     ScrollTrigger.getAll().forEach(trigger => trigger.kill());
@@ -93,7 +92,7 @@ export default function PhilosophySection() {
               <div className="mb-8 philosophy-reveal">
                 <span className="inline-block text-mustard font-medium mb-2 !opacity-100 z-2">OUR PHILOSOPHY</span>
                 <ThreeDText as="h2" className="text-4xl md:text-5xl font-bold mb-6" gradient={false}>
-                  We strongly believe:
+                  We Strongly Believe
                 </ThreeDText>
               </div>
 

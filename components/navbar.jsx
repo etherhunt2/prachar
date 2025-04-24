@@ -14,7 +14,7 @@ const navLinks = [
   { href: '/about', label: 'About' },
   { href: '/services', label: 'Services' },
   { href: '/portfolio', label: 'Portfolio' },
-  { href: '/contact', label: 'Contact' },
+  { href: '/team', label: 'Team' },
 ];
 
 export default function Navbar() {
@@ -73,9 +73,10 @@ export default function Navbar() {
           <Button
             variant="mustard"
             size="sm"
-            className="ml-2 rounded-full h-9 flex items-center"
+            className="ml-2 rounded-full h-9 flex items-center cursor-pointer"
+            onClick={() => window.location.href = '/contact'}
           >
-            Get Started
+            Contact
           </Button>
         </nav>
 
@@ -142,10 +143,10 @@ export default function Navbar() {
                   <Button
                     variant="mustard"
                     size="lg"
-                    className="rounded-full w-full"
-                    onClick={toggleMenu}
+                    className="rounded-full w-full cursor-pointer"
+                    onClick={() => window.location.href = '/contact'}
                   >
-                    Get Started
+                    Contact
                   </Button>
                 </motion.div>
               </nav>
