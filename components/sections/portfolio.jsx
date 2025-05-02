@@ -11,6 +11,9 @@ import belso from '@/public/Portfolio/belso.jpg'
 import innovate from '@/public/Portfolio/innovate.jpg'
 import qualis from '@/public/Portfolio/qualis.jpg'
 import rms from '@/public/Portfolio/rms.jpg'
+import swaad from '@/public/Portfolio/swaadika.jpg'
+import fresh from '@/public/Portfolio/fresh.jpg'
+import swadi from '@/public/Portfolio/swadi.jpg'
 
 const PortfolioGallery = () => {
 
@@ -22,6 +25,8 @@ const PortfolioGallery = () => {
             alt: "ias",
             width: 800,
             height: 600,
+            title: `Spectrum IAS Academy`,
+            desc: `We've worked with Spectrum IAS Academy on scriptwriting and influencer marketing, crafting compelling content and collaborating with key influencers to boost their visibility and engagement with aspiring students.`,
             link: `https://www.facebook.com/SpectrumIasStudyCenter/ `
         },
         {
@@ -30,6 +35,8 @@ const PortfolioGallery = () => {
             alt: "isos",
             width: 800,
             height: 600,
+            title: `Biology by Palak – Sector 20`,
+            desc: `We are proud to partner with Biology by Palak, a leading biology coaching center in Sector 20, known for its expert guidance and outstanding student results. Our team handles their complete Social Media Management (SMM) and Ad Management, helping them grow their online presence, connect with more students, and build a strong, trusted brand in the education sector.We are proud to partner with Biology by Palak, a leading biology coaching center in Sector 20, known for its expert guidance and outstanding student results. Our team handles their complete Social Media Management (SMM) and Ad Management, helping them grow their online presence, connect with more students, and build a strong, trusted brand in the education sector.`,
             link: `https://www.instagram.com/biologybypalak/`
         },
         {
@@ -38,6 +45,8 @@ const PortfolioGallery = () => {
             alt: "belso",
             width: 800,
             height: 600,
+            title: `Belso Ceramics`,
+            desc: `We are proud to manage the Social Media Marketing (SMM) and Ad Management for Belso Ceramics, a premium name in high-quality ceramic products. Through strategic content, targeted campaigns, and strong online branding, we help Belso Ceramics expand their reach, connect with a wider audience, and showcase their craftsmanship to the world.`,
             link: `https://www.instagram.com/belsoceramicsmohali/`
         },
         {
@@ -46,6 +55,8 @@ const PortfolioGallery = () => {
             alt: "innovate",
             width: 800,
             height: 600,
+            title: `Innovate Design`,
+            desc: `We support Innovate Design with professional video editing and ad management services. Our team creates engaging, high-quality content and runs targeted ad campaigns to boost their reach and impact. By handling their media and marketing needs, we help Innovate Design stay focused on innovation and growth.`,
             link: `https://www.instagram.com/innovate.__design/`
         },
         {
@@ -54,6 +65,8 @@ const PortfolioGallery = () => {
             alt: "qualis",
             width: 800,
             height: 600,
+            title: `Qualis`,
+            desc: `We are excited to manage the Social Media Marketing (SMM) and Ad Management for Qualis, a brand dedicated to delivering excellence and innovation. Through impactful campaigns, creative content, and targeted strategies, we help Qualis strengthen its online presence, engage its audience, and drive consistent growth in a competitive market.`,
             link: `https://www.instagram.com/qualishomeware/`
         },
         {
@@ -62,20 +75,56 @@ const PortfolioGallery = () => {
             alt: "rms",
             width: 800,
             height: 600,
+            title: `RMS Chandigarh`,
+            desc: `We work with RMs Chandigarh to provide event management services for schools and colleges, ensuring smooth, memorable experiences. We also support them with professional reel editing, helping to capture and showcase their events with dynamic, high-quality video content that drives engagement and visibility.`,
             link: `https://www.instagram.com/rms_chandigarh/`
         },
+        {
+            id: 7,
+            src: swaad,
+            alt: "Swadika Delight",
+            width: 800,
+            height: 600,
+            title: `Swaadika Delights`,
+            desc: `We helped Swaadika Delights create a unique logo, develop their branding, and packaging design a complete visual identity that reflects their values and vision. Our work ensures they stand out with a cohesive and professional look across all platforms.`,
+            link: `https://www.instagram.com/swaadika.delights/`
+        },
+        {
+            id: 8,
+            src: fresh,
+            alt: "Fresh Kart",
+            width: 800,
+            height: 600,
+            title: `Freshkart`,
+            desc: `We created a dynamic video for Freshkart, showcasing their products and brand story. Our video helped highlight their unique offerings and connect with their target audience, enhancing their marketing efforts`,
+            link: `https://www.instagram.com/freshkart.india?igsh=MXA4cGdubjg4YjR3aQ%3D%3D`
+        },
+        {
+            id: 9,
+            src: swadi,
+            alt: "Swadika Mohali",
+            width: 800,
+            height: 600,
+            title: `Swaadika`,
+            desc: `We helped Swaadika create a unique logo, develop their branding, and menu design a complete visual identity that reflects their values and vision. Our work ensures they stand out with a cohesive and professional look across all platforms.`,
+            link: `https://www.instagram.com/swaadika_mohali?igsh=MTNrY3gzdXhyY3N3`
+        }
     ];
 
     const [selectedImage, setSelectedImage] = useState(null);
 
-    // Handle clicking the image to redirect to the link
-    const handleImageClick = (image) => {
-        // Open the link in a new tab
-        window.open(image.link, '_blank', 'noopener,noreferrer');
-    };
+    // Custom CSS for image hover shadow
+    // const imageHoverStyle = `
+    //     .portfolio-image-box:hover {
+    //         box-shadow: 6px 6px 10px 4px rgb(234 179 8 / 70%);
+    //     }
+    // `;
 
     return (
         <section className="py-12 px-4 md:px-6 lg:px-8">
+            {/* Add style tag for custom CSS */}
+            {/* <style jsx>{imageHoverStyle}</style> */}
+
             <div className="flex mx-auto text-center">
                 <div className="container mx-auto">
                     <motion.div
@@ -92,20 +141,34 @@ const PortfolioGallery = () => {
                         </ThreeDText>
                     </motion.div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
                         {images.map((image) => (
                             <div
                                 key={image.id}
-                                className="relative aspect-square overflow-hidden rounded-lg cursor-pointer group"
-                                onClick={() => handleImageClick(image)}
+                                className="portfolio-image-box flex flex-col bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300"
                             >
-                                <Image
-                                    src={image.src}
-                                    alt={image.alt}
-                                    fill
-                                    className="z-1 object-cover transition-transform duration-300 group-hover:scale-110 group-active:scale-110"
-                                />
-                                <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 group-active:bg-opacity-20 transition-opacity duration-300"></div>
+                                <div className="relative aspect-square w-full overflow-hidden">
+                                    <Image
+                                        src={image.src}
+                                        alt={image.alt}
+                                        fill
+                                        className="object-cover transition-transform duration-300 hover:scale-105"
+                                    />
+                                </div>
+                                <div className="p-6 flex flex-col items-center text-center flex-grow">
+                                    <h3 className="text-xl font-bold mb-3 text-gray-800">{image.title}</h3>
+                                    <p className="text-gray-600 mb-5 line-clamp-4">{image.desc}</p>
+                                    <div className="mt-auto">
+                                        <a
+                                            href={image.link}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="inline-block px-6 py-2 bg-yellow-500 text-white rounded-full hover:bg-yellow-600 transition-colors duration-300"
+                                        >
+                                            Visit Site
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
                         ))}
                     </div>

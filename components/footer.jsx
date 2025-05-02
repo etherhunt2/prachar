@@ -21,10 +21,10 @@ const footerLinks = [
   {
     title: 'Services',
     links: [
-      { label: 'Videography', href: '/services/videography' },
-      { label: 'Photography', href: '/services/photography' },
-      { label: 'SEO', href: '/services/seo' },
-      { label: 'Social Media', href: '/services/social-media' },
+      { label: 'Videography', href: '/services' },
+      { label: 'Photography', href: '/services' },
+      { label: 'Website Development', href: '/services' },
+      { label: 'Social Media', href: '/services' },
     ],
   },
   {
@@ -39,10 +39,10 @@ const footerLinks = [
 ];
 
 const socialLinks = [
-  { icon: Facebook, href: 'https://facebook.com', label: 'Facebook' },
-  { icon: Twitter, href: 'https://twitter.com', label: 'Twitter' },
-  { icon: Instagram, href: 'https://instagram.com', label: 'Instagram' },
-  { icon: Linkedin, href: 'https://linkedin.com', label: 'LinkedIn' },
+  { icon: Facebook, href: 'https://www.facebook.com/share/1KLPiPi2rV/', label: 'Facebook' },
+  { icon: Twitter, href: '#', label: 'Twitter' },
+  { icon: Instagram, href: 'https://www.instagram.com/hello_prachar?igsh=MTZvZDBsemVsN2xq', label: 'Instagram' },
+  { icon: Linkedin, href: 'https://www.linkedin.com/company/helloprachar/', label: 'LinkedIn' },
 ];
 
 const footerVariants = {
@@ -85,7 +85,10 @@ export default function Footer() {
           {/* Brand section */}
           <motion.div className="lg:col-span-2" variants={itemVariants}>
             <Link href="/" className="flex items-center space-x-2 mb-6 group">
-              <div className="relative h-10 w-10 flex-shrink-0">
+              {/* <span className="font-bold text-xl text-white group-hover:text-mustard transition-colors duration-300">
+                Hey
+              </span> */}
+              <div className="relative h-10 w-15 flex-shrink-0">
                 <Image
                   src={logo}
                   alt="Hey Prachar"
@@ -93,9 +96,6 @@ export default function Footer() {
                   className="object-contain group-hover:scale-110 transition-transform duration-300"
                 />
               </div>
-              <span className="font-bold text-xl text-white group-hover:text-mustard transition-colors duration-300">
-                Hey Prachar
-              </span>
             </Link>
 
             <p className="text-white/70 mb-6 max-w-md">
@@ -139,9 +139,8 @@ export default function Footer() {
               <li className="flex items-start space-x-3">
                 <MapPin size={20} className="text-mustard mt-1 flex-shrink-0" />
                 <span className="text-white/70">
-                  Olympus Mons, <br />
-                  Mars, Sun <br />
-                  Milky Way, KBC Void
+                  #595, sec 8b, <br />
+                  Chandigarh, India<br />
                 </span>
               </li>
               <li className="flex items-center space-x-3">
@@ -150,7 +149,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center space-x-3">
                 <Mail size={20} className="text-mustard flex-shrink-0" />
-                <span className="text-white/70">hello@heyprachar.com</span>
+                <span className="text-white/70">pracharbusinesss@gmail.com</span>
               </li>
             </ul>
           </motion.div>

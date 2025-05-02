@@ -8,9 +8,9 @@ import { MarketingIcons } from '@/components/icons/marketing-icons';
 import { randomRange, getRandomElement } from '@/lib/utils';
 
 // Images for each paragraph
-import aboutImage1 from '@/public/Images/About/digital-marketing.jpg';
+import aboutImage1 from '@/public/Images/About/prachar.png';
 import aboutImage2 from '@/public/Images/About/about-2.jpg';
-import aboutImage3 from '@/public/Images/About/about.jpg';
+import aboutImage3 from '@/public/Images/About/approch.png';
 
 const ICON_POSITIONS = [
     { x: '25%', y: '15%' },

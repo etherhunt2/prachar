@@ -44,7 +44,7 @@ export default function Navbar() {
       <div className="container mx-auto px-4 flex items-center justify-between h-16"> {/* Fixed height */}
         {/* Logo - Perfectly aligned */}
         <Link href="/" className="flex items-center h-full gap-2">
-          <div className="relative h-8 w-8 md:h-10 md:w-10 flex items-center">
+          <div className="relative h-8 w-15 md:h-15 md:w-20 flex items-center">
             <Image
               src={logo}
               alt="Hey Prachar"
@@ -52,11 +52,11 @@ export default function Navbar() {
               className="object-contain hover:scale-110 transition-transform duration-300"
             />
           </div>
-          <span className="font-bold text-xl md:text-2xl text-white group-hover:text-mustard transition-colors duration-300">
+          {/* <span className="font-bold text-xl md:text-2xl text-white group-hover:text-mustard transition-colors duration-300">
 
             Hey Prachar
 
-          </span>
+          </span> */}
         </Link>
 
         {/* Desktop Navigation - Vertically centered */}

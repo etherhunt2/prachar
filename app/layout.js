@@ -5,17 +5,43 @@ import Navbar from '@/components/navbar'
 import Footer from '@/components/footer'
 
 export const metadata = {
-  title: 'Hey Prachar - Digital Marketing Redefined',
+  title: 'Hey Prachar - Best Digital Marketing Service',
   description: 'We are the agency that wants to bring you closer to the story of why you started your business in the first place.',
   keywords: 'digital marketing, marketing agency, business growth, online marketing, SEO, social media marketing',
+  icons: {
+    icon: [
+      {
+        url: '/favicon.ico',
+        sizes: '32x32',
+        type: 'image/x-icon',
+      }
+      // {
+      //   url: '/icon-192.png',
+      //   sizes: '192x192',
+      //   type: 'image/png',
+      // },
+      // {
+      //   url: '/icon-512.png',
+      //   sizes: '512x512',
+      //   type: 'image/png',
+      // },
+    ],
+    apple: [
+      {
+        url: '/apple-icon.png',
+        sizes: '180x180',
+        type: 'image/png',
+      },
+    ],
+  },
   openGraph: {
-    title: 'Hey Prachar - Digital Marketing Redefined',
+    title: 'Hey Prachar - Best Digital Marketing Service',
     description: 'We are the agency that wants to bring you closer to the story of why you started your business in the first place.',
     url: 'https://heyprachar.com',
     siteName: 'Hey Prachar',
     images: [
       {
-        url: '/images/og-image.jpg', // Make sure this file exists in your public folder
+        url: '/mainlogo_.png',
         width: 1200,
         height: 630,
         alt: 'Hey Prachar Digital Marketing Agency',
@@ -26,9 +52,9 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Hey Prachar - Digital Marketing Redefined',
+    title: 'Hey Prachar - Best Digital Marketing Service',
     description: 'We are the agency that wants to bring you closer to the story of why you started your business in the first place.',
-    images: ['/images/twitter-image.jpg'], // Make sure this file exists in your public folder
+    images: ['/mainlogo_.png'],
   },
   robots: {
     index: true,

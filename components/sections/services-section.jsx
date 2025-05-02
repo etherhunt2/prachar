@@ -10,8 +10,10 @@ import { Button } from '@/components/ui/button';
 import { MarketingIcons } from '@/components/icons/marketing-icons';
 import videography from '@/public/Images/videography.jpg';
 import socialImage from '@/public/Images/social-media.jpg';
-import adsImage from '@/public/Images/ads.jpg';
+import adsImage from '@/public/Images/ads.png';
 import webDevImage from '@/public/Images/webdev.jpg';
+import seoImage from '@/public/Images/services/seo.png';
+import pgImg from '@/public/Images/services/photography.png';
 
 // Register ScrollTrigger with GSAP
 if (typeof window !== 'undefined') {
@@ -33,7 +35,7 @@ const services = [
     subtitle: 'Photography That Speaks Louder Than Words',
     description: `A good photo captures a moment. A great photo creates a story. At Prachar, we don't just click pictures—we craft visual narratives that make people stop, stare, and feel...`,
     icon: 'Camera',
-    image: 'https://images.unsplash.com/photo-1542038784456-1ea8e935640e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
+    image: pgImg,
   },
   {
     id: 'seo',
@@ -41,7 +43,7 @@ const services = [
     subtitle: 'SEO That Gets You Found, Not Forgotten',
     description: `Having a website without SEO is like opening a store in the middle of nowhere and expecting a crowd. At Prachar, we make sure your brand isn't just present online—it's...`,
     icon: 'SEO',
-    image: 'https://images.unsplash.com/photo-1562577309-4932fdd64cd1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
+    image: seoImage,
   },
   {
     id: 'ads',

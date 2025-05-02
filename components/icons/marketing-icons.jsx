@@ -4,7 +4,7 @@ import {
   Camera, Search, Video, Mail, BarChart, Hash, Globe, Phone,
   Image, MessageCircle, Share2, PieChart, Megaphone
 } from 'lucide-react';
-import React from 'react';
+import React, { JSX } from 'react';
 
 export const MarketingIcons = {
   Camera: (props) => (
@@ -51,6 +51,8 @@ export const MarketingIcons = {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
+      width="20"
+      height="20"
       fill="none"
       stroke="currentColor"
       strokeWidth="2"
@@ -58,15 +60,17 @@ export const MarketingIcons = {
       strokeLinejoin="round"
       {...props}
     >
-      <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
-      <polyline points="16 17 21 12 16 7" />
-      <line x1="21" y1="12" x2="9" y2="12" />
+      <circle cx="12" cy="10" r="3" />
+      <path d="M12 2a8 8 0 0 1 8 8c0 1.892-1.854 6.976-8 12-6.146-5.024-8-10.108-8-12a8 8 0 0 1 8-8z" />
+      <line x1="4" y1="19" x2="20" y2="19" />
     </svg>
   ),
   ContentMarketing: (props) => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
+      width="20"
+      height="20"
       fill="none"
       stroke="currentColor"
       strokeWidth="2"
@@ -85,6 +89,8 @@ export const MarketingIcons = {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
+      width="20"
+      height="20"
       fill="none"
       stroke="currentColor"
       strokeWidth="2"
@@ -99,6 +105,8 @@ export const MarketingIcons = {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
+      width="20"
+      height="20"
       fill="none"
       stroke="currentColor"
       strokeWidth="2"

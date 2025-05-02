@@ -6,7 +6,7 @@ import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { ThreeDText } from '@/components/ui/3d-text';
 import aditi from '@/public/Images/aditi.jpg';
-import r from '@/public/Images/rahul.jpg';
+import r from '@/public/Images/rahulcrop.png';
 
 // Example team members
 const teamMembers = [

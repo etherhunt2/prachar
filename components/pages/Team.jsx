@@ -131,7 +131,6 @@ const TeamPage = () => {
                 <section className="py-16 bg-black">
                     <div className="container mx-auto px-4 gap-8">
                         <div className="flex flex-col md:flex-row gap-8">
-                            {/* Image Section - Full width on mobile, half width on desktop */}
                             <motion.div
                                 initial={{ opacity: 0, y: 30 }}
                                 whileInView={{ opacity: 1, y: 0 }}
@@ -154,7 +153,6 @@ const TeamPage = () => {
                                 </motion.div>
                             </motion.div>
 
-                            {/* Introduction Section - Full width on mobile, half width on desktop */}
                             <motion.div
                                 initial={{ opacity: 0, y: 30 }}
                                 whileInView={{ opacity: 1, y: 0 }}
@@ -173,23 +171,22 @@ const TeamPage = () => {
                                     help every business reach the heights it truly deserves.
                                 </p>
                                 <div className="flex gap-4 mt-2">
-                                    <a href="#" className="text-mustard hover:text-white transition-colors">
+                                    <a href="https://www.linkedin.com/in/aditisharma21?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" className="text-mustard hover:text-white transition-colors">
                                         <span className="sr-only">LinkedIn</span>
                                         <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                             <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452z" />
                                         </svg>
                                     </a>
-                                    <a href="#" className="text-mustard hover:text-white transition-colors">
-                                        <span className="sr-only">Twitter</span>
+                                    <a href="https://www.instagram.com/aditii.sharmaa21?igsh=MWMybmt0NzdoNG1lYQ==" className="text-mustard hover:text-white transition-colors">
+                                        <span className="sr-only">Instagram</span>
                                         <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                            <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
+                                            <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5A4.25 4.25 0 0 0 20.5 16.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5zm4.25 3.25a5.25 5.25 0 1 1 0 10.5 5.25 5.25 0 0 1 0-10.5zm0 1.5a3.75 3.75 0 1 0 0 7.5 3.75 3.75 0 0 0 0-7.5zm5.25.75a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
                                         </svg>
                                     </a>
                                 </div>
                             </motion.div>
                         </div>
                         <div className="flex flex-col md:flex-row gap-8 mt-8">
-                            {/* Image Section - Full width on mobile, half width on desktop */}
                             <motion.div
                                 initial={{ opacity: 0, y: 30 }}
                                 whileInView={{ opacity: 1, y: 0 }}
@@ -212,7 +209,6 @@ const TeamPage = () => {
                                 </motion.div>
                             </motion.div>
 
-                            {/* Introduction Section - Full width on mobile, half width on desktop */}
                             <motion.div
                                 initial={{ opacity: 0, y: 30 }}
                                 whileInView={{ opacity: 1, y: 0 }}
@@ -229,16 +225,16 @@ const TeamPage = () => {
                                     stands out with a strong visual impact.
                                 </p>
                                 <div className="flex gap-4 mt-2">
-                                    <a href="#" className="text-mustard hover:text-white transition-colors">
+                                    <a href="https://www.linkedin.com/in/rahul-kareer09?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" className="text-mustard hover:text-white transition-colors">
                                         <span className="sr-only">LinkedIn</span>
                                         <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                             <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452z" />
                                         </svg>
                                     </a>
-                                    <a href="#" className="text-mustard hover:text-white transition-colors">
-                                        <span className="sr-only">Twitter</span>
+                                    <a href="https://www.instagram.com/rahul_kareer08?igsh=MTBndWp0ZnpkOXliNA==" className="text-mustard hover:text-white transition-colors">
+                                        <span className="sr-only">Instagram</span>
                                         <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                            <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
+                                            <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5A4.25 4.25 0 0 0 20.5 16.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5zm4.25 3.25a5.25 5.25 0 1 1 0 10.5 5.25 5.25 0 0 1 0-10.5zm0 1.5a3.75 3.75 0 1 0 0 7.5 3.75 3.75 0 0 0 0-7.5zm5.25.75a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
                                         </svg>
                                     </a>
                                 </div>
