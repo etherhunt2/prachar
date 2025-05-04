@@ -6,7 +6,7 @@ import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { ThreeDText } from '@/components/ui/3d-text';
 import aditi from '@/public/Images/aditi.jpg';
-import r from '@/public/Images/rahulcrop.png';
+import r from '@/public/Images/rahulcrop.jpg';
 
 // Example team members
 const teamMembers = [
@@ -104,7 +104,7 @@ export default function TeamSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <ThreeDText as="h2" className="text-4xl md:text-5xl font-bold mb-6">
+            <ThreeDText as="h2" className="text-4xl md:text-5xl font-bold mb-6" gradient={false}>
               Meet Our Team
             </ThreeDText>
 
@@ -187,7 +187,7 @@ export default function TeamSection() {
               With decades of combined experience in digital marketing, content creation, and brand development, our team is ready to take your business to the next level.
             </p>
 
-            <Button variant="mustard" size="lg" className="rounded-full" onClick={() => window.location.href = '/team'}>
+            <Button variant="mustard" size="lg" className="rounded-full cursor-pointer" onClick={() => window.location.href = '/team'}>
               Meet Our Team
             </Button>
           </motion.div>

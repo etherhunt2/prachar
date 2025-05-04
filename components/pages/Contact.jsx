@@ -108,6 +108,7 @@ const ContactPage = () => {
                             <ThreeDText
                                 elementType="h1"
                                 className="text-5xl md:text-7xl font-extrabold mb-6"
+                                gradient={false}
                             >
                                 Contact Us
                             </ThreeDText>
@@ -128,7 +129,7 @@ const ContactPage = () => {
                                 className="w-full md:w-1/2 relative h-80 md:h-auto rounded-xl overflow-hidden perspective-800 border border-white/5 hover:border-yellow-300/30"
                             >
                                 <div className="p-8 flex flex-col h-full items-center justify-center">
-                                    <h3 className="text-2xl font-bold text-white mb-6">Contact Information</h3>
+                                    <h3 className="text-2xl font-bold text-white mb-6" gradient={false}>Contact Information</h3>
 
                                     <div className="space-y-4 mb-6">
                                         <div className="flex items-center">
@@ -152,7 +153,7 @@ const ContactPage = () => {
                                         </div>
                                     </div>
 
-                                    <h4 className="text-lg font-semibold text-white mb-4">Follow Us</h4>
+                                    <h4 className="text-lg font-semibold text-white mb-4" gradient={false}>Follow Us</h4>
                                     <div className="flex space-x-4">
                                         <a href="https://www.facebook.com/share/1KLPiPi2rV/" className="text-white hover:text-yellow-200 hover:scale-110 transition-colors">
                                             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">

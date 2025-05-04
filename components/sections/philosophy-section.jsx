@@ -90,14 +90,14 @@ export default function PhilosophySection() {
           <div className="flex flex-col md:flex-row items-center justify-between gap-16">
             <div className="md:w-3/5">
               <div className="mb-8 philosophy-reveal">
-                <span className="inline-block text-mustard font-medium mb-2 !opacity-100 z-2">OUR PHILOSOPHY</span>
+                <span className="inline-block text-yellow-200 font-medium mb-2 !opacity-100 z-2">OUR PHILOSOPHY</span>
                 <ThreeDText as="h2" className="text-4xl md:text-5xl font-bold mb-6" gradient={false}>
                   We Strongly Believe
                 </ThreeDText>
               </div>
 
               <div className="mb-6 philosophy-reveal">
-                <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 text-white/90">
+                <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 text-white/90" gradient={false}>
                   𝐔𝐜𝐡𝐢 𝐝𝐮𝐤𝐚𝐧, 𝐟𝐞𝐞𝐤𝐚 𝐩𝐚𝐤𝐰𝐚𝐧
                 </h3>
                 <p className="text-white/70 text-lg leading-relaxed">
@@ -108,7 +108,7 @@ export default function PhilosophySection() {
               </div>
 
               <div className="mb-6 philosophy-reveal">
-                <p className="text-xl font-semibold text-mustard mb-2">
+                <p className="text-xl font-semibold text-yellow-400 mb-2" gradient={false}>
                   𝐅𝐮𝐥𝐥 𝐬𝐭𝐨𝐦𝐚𝐜𝐡𝐬 𝐚𝐧𝐝 𝐬𝐚𝐭𝐢𝐬𝐟𝐢𝐞𝐝 𝐡𝐞𝐚𝐫𝐭𝐬
                 </p>
                 <p className="text-white/70 text-lg leading-relaxed">

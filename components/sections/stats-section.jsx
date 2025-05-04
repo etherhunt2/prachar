@@ -240,7 +240,7 @@ export default function StatsSection() {
         {/* Section heading */}
         <div className="text-center mb-16 z-10 !opacity-100" ref={headingRef}>
           {/* <span className="inline-block text-mustard font-medium mb-2">OUR IMPACT</span> */}
-          <ThreeDText as="h2" className="text-4xl md:text-5xl font-bold mb-6">
+          <ThreeDText as="h2" className="text-4xl md:text-5xl font-bold mb-6" gradient={false}>
             Our Exprience
           </ThreeDText>
         </div>
@@ -265,7 +265,7 @@ export default function StatsSection() {
           </p>
           <Button
             variant="defaultVariants"
-            className="inline-flex items-center gap-2 bg-gradient-to-r from-yellow-500 to-yellow-500/80 text-black px-8 py-3 rounded-full font-medium hover:shadow-lg hover:shadow-mustard/20 transition-all duration-300"
+            className="inline-flex cursor-pointer items-center gap-2 bg-gradient-to-r from-yellow-500 to-yellow-500/80 text-black px-8 py-3 rounded-full font-medium hover:shadow-lg hover:shadow-mustard/20 transition-all duration-300"
           >
             <Rocket className="w-4 h-4 !opacity-100 z-2" />
             <span>Get Started</span>

@@ -110,6 +110,7 @@ export default function AboutSection() {
                         <ThreeDText
                             elementType="h1"
                             className="text-5xl md:text-7xl font-extrabold mb-6"
+                            gradient={false}
                         >
                             About Us
                         </ThreeDText>

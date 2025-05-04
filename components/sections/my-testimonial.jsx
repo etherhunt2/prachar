@@ -39,6 +39,7 @@ const Testimonials = () => {
                         <ThreeDText
                             elementType="h2"
                             className="text-2xl sm:text-3xl md:text-7xl font-extrabold hero-heading"
+                            gradient={false}
                         >
                             Our Testimonials
                         </ThreeDText>
@@ -51,7 +52,7 @@ const Testimonials = () => {
                                 className="bg-gray-900 rounded-lg shadow-md p-6 text-center"
                             >
                                 <p className="text-white mb-4">{testimonial.text}</p>
-                                <div className="text-white font-medium">
+                                <div className="text-yellow-400 font-medium">
                                     By: {testimonial.author}, {testimonial.company} (Company)
                                 </div>
                             </div>

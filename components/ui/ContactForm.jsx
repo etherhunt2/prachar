@@ -72,7 +72,7 @@ const ContactForm = () => {
 
     return (
         <div className="w-full">
-            <h3 className="text-2xl font-bold text-white mb-6">Get In Touch</h3>
+            <h3 className="text-2xl font-bold text-white mb-6" gradient={false}>Get In Touch</h3>
 
             {formStatus === 'success' && (
                 <motion.div

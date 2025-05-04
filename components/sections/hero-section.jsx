@@ -225,6 +225,7 @@ export default function HeroSection() {
             <ThreeDText
               elementType="h1"
               className="text-4xl sm:text-5xl md:text-7xl font-extrabold hero-heading !opacity-100"
+              gradient={false}
             >
               Rekindle Your WHY
             </ThreeDText>

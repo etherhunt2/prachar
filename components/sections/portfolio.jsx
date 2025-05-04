@@ -135,6 +135,7 @@ const PortfolioGallery = () => {
                     >
                         <ThreeDText
                             elementType="h2"
+                            gradient={false}
                             className="text-2xl sm:text-3xl md:text-7xl font-extrabold hero-heading"
                         >
                             Our Clients

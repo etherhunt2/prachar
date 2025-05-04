@@ -106,6 +106,7 @@ const Portfolio = () => {
                             <ThreeDText
                                 elementType="h1"
                                 className="text-5xl md:text-7xl font-extrabold mb-6"
+                                gradient={false}
                             >
                                 Portfolio
                             </ThreeDText>

@@ -473,7 +473,7 @@ const Service = () => {
     const renderServiceSection = (service) => (
         <div key={service.id} className="mb-12">
             <div className="text-center mb-8">
-                <ThreeDText elementType="h3" className="text-3xl md:text-5xl font-bold mb-4">
+                <ThreeDText elementType="h3" className="text-3xl md:text-5xl font-bold mb-4" gradient={false}>
                     {service.title}
                 </ThreeDText>
             </div>
@@ -489,7 +489,7 @@ const Service = () => {
                     </div>
                 </div>
                 <div className="w-full lg:w-3/5">
-                    <h3 className="text-2xl font-bold text-white mb-3">
+                    <h3 className="text-2xl font-bold text-white mb-3" gradient={false}>
                         {service.subtitle}
                     </h3>
                     <div className="text-white/80 space-y-3 mb-4">
