@@ -5,15 +5,15 @@ import Image from "next/image";
 import { motion } from 'framer-motion';
 import { ThreeDText } from "../ui/3d-text";
 
-import ias from '@/public/Portfolio/ias.jpg'
-import isos from '@/public/Portfolio/isos.jpg'
-import belso from '@/public/Portfolio/belso.jpg'
-import innovate from '@/public/Portfolio/innovate.jpg'
-import qualis from '@/public/Portfolio/qualis.jpg'
+import ias from '@/public/Portfolio/ias.png'
+import isos from '@/public/Portfolio/isos.png'
+import belso from '@/public/Portfolio/belso.png'
+import innovate from '@/public/Portfolio/innovate.png'
+import qualis from '@/public/Portfolio/qualis.png'
 import rms from '@/public/Portfolio/rms.jpg'
-import swaad from '@/public/Portfolio/swaadika.jpg'
-import fresh from '@/public/Portfolio/fresh.jpg'
-import swadi from '@/public/Portfolio/swadi.jpg'
+import swaad from '@/public/Portfolio/swaadika.png'
+import fresh from '@/public/Portfolio/fresh.png'
+import swadi from '@/public/Portfolio/swadi.png'
 
 const PortfolioGallery = () => {
 
@@ -114,16 +114,16 @@ const PortfolioGallery = () => {
     const [selectedImage, setSelectedImage] = useState(null);
 
     // Custom CSS for image hover shadow
-    // const imageHoverStyle = `
-    //     .portfolio-image-box:hover {
-    //         box-shadow: 6px 6px 10px 4px rgb(234 179 8 / 70%);
-    //     }
-    // `;
+    const imageHoverStyle = `
+        .portfolio-image-box:hover {
+            box-shadow: 6px 6px 10px 4px rgb(234 179 8 / 70%);
+        }
+    `;
 
     return (
         <section className="py-12 px-4 md:px-6 lg:px-8">
             {/* Add style tag for custom CSS */}
-            {/* <style jsx>{imageHoverStyle}</style> */}
+            <style jsx>{imageHoverStyle}</style>
 
             <div className="flex mx-auto text-center">
                 <div className="container mx-auto">
@@ -146,25 +146,25 @@ const PortfolioGallery = () => {
                         {images.map((image) => (
                             <div
                                 key={image.id}
-                                className="portfolio-image-box flex flex-col bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300"
+                                className="portfolio-image-box flex flex-col bg-gray-950 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300"
                             >
                                 <div className="relative aspect-square w-full overflow-hidden">
                                     <Image
                                         src={image.src}
                                         alt={image.alt}
                                         fill
-                                        className="object-cover transition-transform duration-300 hover:scale-105"
+                                        className="object-fit transition-transform duration-300 hover:scale-105"
                                     />
                                 </div>
                                 <div className="p-6 flex flex-col items-center text-center flex-grow">
-                                    <h3 className="text-xl font-bold mb-3 text-gray-800">{image.title}</h3>
-                                    <p className="text-gray-600 mb-5 line-clamp-4">{image.desc}</p>
+                                    <h3 className="text-xl font-bold mb-3 text-white">{image.title}</h3>
+                                    <p className="text-white/80 mb-5 line-clamp-4">{image.desc}</p>
                                     <div className="mt-auto">
                                         <a
                                             href={image.link}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="inline-block px-6 py-2 bg-yellow-500 text-white rounded-full hover:bg-yellow-600 transition-colors duration-300"
+                                            className="inline-block px-6 py-2 bg-yellow-500 text-blue-900 rounded-full hover:bg-yellow-600 transition-colors duration-300"
                                         >
                                             Visit Site
                                         </a>

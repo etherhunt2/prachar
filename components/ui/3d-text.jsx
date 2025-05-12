@@ -140,12 +140,6 @@ export function ThreeDText({
             }}
           >
             {children}
-
-            {/* Optional highlight overlay for enhanced 3D effect */}
-            {(depth === "heavy" || isMobile) && (
-              <span className="absolute inset-0 bg-gradient-to-b from-white/10 to-transparent mix-blend-overlay pointer-events-none"
-                aria-hidden="true"></span>
-            )}
           </Component>
         </motion.div>
       </motion.div>
