@@ -168,6 +168,14 @@ export default function HeroSection() {
     return () => ctx.revert();
   }, [isClient]);
 
+  const handleService = () => {
+    window.location.href = '/services';
+  }
+
+  const handleContact = () => {
+    window.location.href = '/contact';
+  }
+
   return (
     <section
       ref={containerRef}
@@ -249,10 +257,14 @@ export default function HeroSection() {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
-            <Button variant="mustardOutline" size="lg" className="cursor-pointer rounded-full px-8 py-6 text-lg font-bold">
+            <Button variant="mustardOutline"
+              size="lg"
+              onClick={handleService}
+              className="cursor-pointer rounded-full px-8 py-6 text-lg font-bold"
+            >
               Our Services
             </Button>
-            <Button variant="3d" size="lg" className="cursor-pointer rounded-full px-8 py-6 text-lg font-bold">
+            <Button variant="3d" onClick={handleContact} size="lg" className="cursor-pointer rounded-full px-8 py-6 text-lg font-bold">
               Contact Us
             </Button>
           </motion.div>

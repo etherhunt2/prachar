@@ -2,7 +2,6 @@
 
 import React from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
@@ -89,8 +88,8 @@ export default function Footer() {
                 Hey
               </span> */}
               <div className="relative h-10 w-15 flex-shrink-0">
-                <Image
-                  src={logo}
+                <img
+                  src='/mainlogo_.png'
                   alt="Hey Prachar"
                   fill
                   className="object-contain group-hover:scale-110 transition-transform duration-300"

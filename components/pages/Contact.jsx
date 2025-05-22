@@ -117,8 +117,8 @@ const ContactPage = () => {
                 </section>
 
                 {/* Contact Section */}
-                <section className="py-16 bg-black">
-                    <div className="container mx-auto px-4 gap-8">
+                <section className="py-16 bg-black flex">
+                    <div className="container mx-auto px-4 gap-8 items-center justify-center">
                         <div className="flex flex-col md:flex-row gap-8">
                             {/* Contact Detail Section */}
                             <motion.div
@@ -177,17 +177,6 @@ const ContactPage = () => {
                                         </a>
                                     </div>
                                 </div>
-                            </motion.div>
-
-                            {/* Contact Form Section */}
-                            <motion.div
-                                initial={{ opacity: 0, y: 30 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ duration: 0.6, delay: 0.3 }}
-                                className="w-full md:w-1/2 flex flex-col justify-center p-6 bg-black/50 rounded-xl border border-white/5"
-                            >
-                                <ContactForm />
                             </motion.div>
                         </div>
                     </div>

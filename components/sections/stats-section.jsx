@@ -241,7 +241,7 @@ export default function StatsSection() {
         <div className="text-center mb-16 z-10 !opacity-100" ref={headingRef}>
           {/* <span className="inline-block text-mustard font-medium mb-2">OUR IMPACT</span> */}
           <ThreeDText as="h2" className="text-4xl md:text-5xl font-bold mb-6" gradient={false}>
-            Our Exprience
+            Our Experience
           </ThreeDText>
         </div>
 

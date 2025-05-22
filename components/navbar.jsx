@@ -1,13 +1,11 @@
 'use client';
 
 import Link from 'next/link';
-import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
-import logo from '@/public/mainlogo_.png';
 
 const navLinks = [
   { href: '/', label: 'Home' },
@@ -45,8 +43,8 @@ export default function Navbar() {
         {/* Logo - Perfectly aligned */}
         <Link href="/" className="flex items-center h-full gap-2">
           <div className="relative h-8 w-15 md:h-15 md:w-20 flex items-center">
-            <Image
-              src={logo}
+            <img
+              src='/mainlogo_.png'
               alt="Hey Prachar"
               fill
               className="object-contain hover:scale-110 transition-transform duration-300"

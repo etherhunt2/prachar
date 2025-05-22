@@ -1,19 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
 import { motion } from 'framer-motion';
 import { ThreeDText } from "../ui/3d-text";
-
-import ias from '@/public/Portfolio/ias.png'
-import isos from '@/public/Portfolio/isos.png'
-import belso from '@/public/Portfolio/belso.png'
-import innovate from '@/public/Portfolio/innovate.png'
-import qualis from '@/public/Portfolio/qualis.png'
-import rms from '@/public/Portfolio/rms.jpg'
-import swaad from '@/public/Portfolio/swaadika.png'
-import fresh from '@/public/Portfolio/fresh.png'
-import swadi from '@/public/Portfolio/swadi.png'
 
 const PortfolioGallery = () => {
 
@@ -21,7 +10,7 @@ const PortfolioGallery = () => {
     const images = [
         {
             id: 1,
-            src: ias,
+            src: '/Portfolio/ias.png',
             alt: "ias",
             width: 800,
             height: 600,
@@ -31,7 +20,7 @@ const PortfolioGallery = () => {
         },
         {
             id: 2,
-            src: isos,
+            src: '/portfolio/7.png',
             alt: "isos",
             width: 800,
             height: 600,
@@ -41,7 +30,7 @@ const PortfolioGallery = () => {
         },
         {
             id: 3,
-            src: belso,
+            src: '/portfolio/6.png',
             alt: "belso",
             width: 800,
             height: 600,
@@ -51,7 +40,7 @@ const PortfolioGallery = () => {
         },
         {
             id: 4,
-            src: innovate,
+            src: '/Portfolio/innovate.png',
             alt: "innovate",
             width: 800,
             height: 600,
@@ -61,7 +50,7 @@ const PortfolioGallery = () => {
         },
         {
             id: 5,
-            src: qualis,
+            src: '/portfolio/3.png',
             alt: "qualis",
             width: 800,
             height: 600,
@@ -71,7 +60,7 @@ const PortfolioGallery = () => {
         },
         {
             id: 6,
-            src: rms,
+            src: '/Portfolio/rms.jpg',
             alt: "rms",
             width: 800,
             height: 600,
@@ -81,7 +70,7 @@ const PortfolioGallery = () => {
         },
         {
             id: 7,
-            src: swaad,
+            src: '/portfolio/1.png',
             alt: "Swadika Delight",
             width: 800,
             height: 600,
@@ -91,7 +80,7 @@ const PortfolioGallery = () => {
         },
         {
             id: 8,
-            src: fresh,
+            src: '/portfolio/4.png',
             alt: "Fresh Kart",
             width: 800,
             height: 600,
@@ -101,7 +90,7 @@ const PortfolioGallery = () => {
         },
         {
             id: 9,
-            src: swadi,
+            src: '/Portfolio/swadi.png',
             alt: "Swadika Mohali",
             width: 800,
             height: 600,
@@ -110,8 +99,6 @@ const PortfolioGallery = () => {
             link: `https://www.instagram.com/swaadika_mohali?igsh=MTNrY3gzdXhyY3N3`
         }
     ];
-
-    const [selectedImage, setSelectedImage] = useState(null);
 
     // Custom CSS for image hover shadow
     const imageHoverStyle = `
@@ -149,11 +136,11 @@ const PortfolioGallery = () => {
                                 className="portfolio-image-box flex flex-col bg-gray-950 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300"
                             >
                                 <div className="relative aspect-square w-full overflow-hidden">
-                                    <Image
+                                    <img
                                         src={image.src}
                                         alt={image.alt}
                                         fill
-                                        className="object-fit transition-transform duration-300 hover:scale-105"
+                                        className="object-cover transition-transform duration-300 hover:scale-105"
                                     />
                                 </div>
                                 <div className="p-6 flex flex-col items-center text-center flex-grow">

@@ -6,9 +6,6 @@ import { ThreeDText } from '../ui/3d-text';
 import { MarketingIcons } from '../icons/marketing-icons';
 import { randomRange, getRandomElement } from '@/lib/utils';
 import { motion } from "framer-motion";
-import Image from 'next/image';
-import aditi from "@/public/Images/aditi.jpg";
-import r from "@/public/Images/rahul.jpg";
 
 const ICON_POSITIONS = [
     { x: '25%', y: '15%' },
@@ -143,8 +140,8 @@ const TeamPage = () => {
                                     variants={imageVariants}
                                     className="h-full"
                                 >
-                                    <Image
-                                        src={aditi}
+                                    <img
+                                        src="/Images/aditi.jpg"
                                         alt='aditi'
                                         sizes="(max-width: 768px) 100vw, 50vw"
                                         className="object-cover w-full h-full"
@@ -199,8 +196,8 @@ const TeamPage = () => {
                                     variants={imageVariants}
                                     className="h-full"
                                 >
-                                    <Image
-                                        src={r}
+                                    <img
+                                        src="Images/rahulcrop.jpg"
                                         alt='rahul'
                                         sizes="(max-width: 768px) 100vw, 50vw"
                                         className="object-cover w-full h-full"

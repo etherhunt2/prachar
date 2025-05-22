@@ -2,15 +2,9 @@
 
 import React, { useRef, useEffect, useState } from 'react';
 import { ThreeDText } from '@/components/ui/3d-text';
-import Image from 'next/image';
 import { FloatingIcon } from '@/components/ui/floating-icon';
 import { MarketingIcons } from '@/components/icons/marketing-icons';
 import { randomRange, getRandomElement } from '@/lib/utils';
-
-// Images for each paragraph
-import aboutImage1 from '@/public/Images/About/prachar.png';
-import aboutImage2 from '@/public/Images/About/about-2.jpg';
-import aboutImage3 from '@/public/Images/About/approch.png';
 
 const ICON_POSITIONS = [
     { x: '25%', y: '15%' },
@@ -125,8 +119,8 @@ export default function AboutSection() {
                     <div className="flex flex-col md:flex-row items-center gap-8 mb-16">
                         <div className="w-full md:w-1/2">
                             <div className="relative rounded-xl overflow-hidden aspect-video">
-                                <Image
-                                    src={aboutImage1}
+                                <img
+                                    src='/Images/About/prachar.png'
                                     alt="Prachar Advertising & Services"
                                     fill
                                     className="object-cover"
@@ -149,8 +143,8 @@ export default function AboutSection() {
                     <div className="flex flex-col md:flex-row-reverse items-center gap-8 mb-16">
                         <div className="w-full md:w-1/2">
                             <div className="relative rounded-xl overflow-hidden aspect-video">
-                                <Image
-                                    src={aboutImage2}
+                                <img
+                                    src='/Images/About/about-2.jpg'
                                     alt="Our Services"
                                     fill
                                     className="object-cover"
@@ -175,8 +169,8 @@ export default function AboutSection() {
                     <div className="flex flex-col md:flex-row items-center gap-8">
                         <div className="w-full md:w-1/2">
                             <div className="relative rounded-xl overflow-hidden aspect-video">
-                                <Image
-                                    src={aboutImage3}
+                                <img
+                                    src='/Images/About/approch.png'
                                     alt="Our Approach"
                                     fill
                                     className="object-cover"

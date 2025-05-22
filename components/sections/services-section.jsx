@@ -4,16 +4,9 @@ import React, { useRef, useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import Image from 'next/image';
 import { ThreeDText } from '@/components/ui/3d-text';
 import { Button } from '@/components/ui/button';
 import { MarketingIcons } from '@/components/icons/marketing-icons';
-import videography from '@/public/Images/videography.jpg';
-import socialImage from '@/public/Images/social-media.jpg';
-import adsImage from '@/public/Images/ads.png';
-import webDevImage from '@/public/Images/webdev.jpg';
-import seoImage from '@/public/Images/services/seo.png';
-import pgImg from '@/public/Images/services/photography.png';
 
 // Register ScrollTrigger with GSAP
 if (typeof window !== 'undefined') {
@@ -27,7 +20,7 @@ const services = [
     subtitle: 'Your Brand Deserves More Than Just Another Video',
     description: `Let's cut to the chase—everyone's making videos, but not everyone's making good ones. That's where Prachar steps in. If you think a video is just about hitting record, think again...`,
     icon: 'Video',
-    image: videography,
+    image: '/Images/videography.jpg',
   },
   {
     id: 'photography',
@@ -35,7 +28,7 @@ const services = [
     subtitle: 'Photography That Speaks Louder Than Words',
     description: `A good photo captures a moment. A great photo creates a story. At Prachar, we don't just click pictures—we craft visual narratives that make people stop, stare, and feel...`,
     icon: 'Camera',
-    image: pgImg,
+    image: '/Images/services/photography.png',
   },
   {
     id: 'seo',
@@ -43,7 +36,7 @@ const services = [
     subtitle: 'SEO That Gets You Found, Not Forgotten',
     description: `Having a website without SEO is like opening a store in the middle of nowhere and expecting a crowd. At Prachar, we make sure your brand isn't just present online—it's...`,
     icon: 'SEO',
-    image: seoImage,
+    image: '/Images/services/seo.png',
   },
   {
     id: 'ads',
@@ -51,7 +44,7 @@ const services = [
     subtitle: 'Ad Management That Spends Smart, Not Just Spends',
     description: `Running ads isn't rocket science—running ads that actually convert is. At Prachar, we don't believe in throwing money at Meta and Google....`,
     icon: 'Ads',
-    image: adsImage,
+    image: '/Images/ads.png',
   },
   {
     id: 'social',
@@ -59,7 +52,7 @@ const services = [
     subtitle: 'Social Media That Sells, Not Just Scrolls',
     description: `Posting pretty pictures and hoping for the best? That's not a strategy—that's wishful thinking. At Prachar, we don't just manage social media;...`,
     icon: 'SocialMedia',
-    image: socialImage,
+    image: '/Images/social-media.jpg',
   },
   {
     id: 'webDev',
@@ -67,7 +60,7 @@ const services = [
     subtitle: 'Website Development That Works, Not Just Looks Good',
     description: `A website isn't just a digital business card—it's your 24/7 sales machine. At Prachar, we don't just build websites;...`,
     icon: 'WebDesign',
-    image: webDevImage,
+    image: '/Images/webdev.jpg',
   },
 ];
 
@@ -176,7 +169,7 @@ export default function ServicesSection() {
             >
               <div className="relative h-48 overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-b from-black/0 to-black/80 z-10"></div>
-                <Image
+                <img
                   src={service.image}
                   alt={service.title}
                   fill

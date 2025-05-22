@@ -509,11 +509,12 @@ const Service = () => {
                                 return (
                                     <div key={i} className="flex items-start p-3 bg-gray-900/20 rounded-lg border border-white/5">
                                         <div className="mr-3 text-yellow-400">
-                                            {IconComponent ? (
+                                            <Zap className="h-6 w-6" />
+                                            {/* {IconComponent ? (
                                                 <IconComponent className="h-6 w-6" />
                                             ) : (
                                                 <Zap className="h-6 w-6" />
-                                            )}
+                                            )} */}
                                         </div>
                                         <div>
                                             <h5 className="text-white font-medium mb-1">{feature.title}</h5>
