@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import { motion } from 'framer-motion';
 import { ThreeDText } from "../ui/3d-text";
 
@@ -10,7 +9,7 @@ const PortfolioGallery = () => {
     const images = [
         {
             id: 1,
-            src: '/Portfolio/ias.png',
+            src: '/portfolio/5.png',
             alt: "ias",
             width: 800,
             height: 600,
@@ -40,7 +39,7 @@ const PortfolioGallery = () => {
         },
         {
             id: 4,
-            src: '/Portfolio/innovate.png',
+            src: '/portfolio/2.png',
             alt: "innovate",
             width: 800,
             height: 600,
@@ -60,7 +59,7 @@ const PortfolioGallery = () => {
         },
         {
             id: 6,
-            src: '/Portfolio/rms.jpg',
+            src: '/portfolio/9.png',
             alt: "rms",
             width: 800,
             height: 600,
@@ -70,7 +69,7 @@ const PortfolioGallery = () => {
         },
         {
             id: 7,
-            src: '/portfolio/1.png',
+            src: '/portfolio/8.png',
             alt: "Swadika Delight",
             width: 800,
             height: 600,
@@ -90,7 +89,7 @@ const PortfolioGallery = () => {
         },
         {
             id: 9,
-            src: '/Portfolio/swadi.png',
+            src: '/portfolio/1.png',
             alt: "Swadika Mohali",
             width: 800,
             height: 600,
