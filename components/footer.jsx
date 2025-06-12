@@ -38,10 +38,10 @@ const footerLinks = [
 ];
 
 const socialLinks = [
-  { icon: Facebook, href: 'https://www.facebook.com/share/1KLPiPi2rV/', label: 'Facebook' },
+  { icon: Facebook, href: '#', label: 'Facebook' },
   { icon: Twitter, href: '#', label: 'Twitter' },
-  { icon: Instagram, href: 'https://www.instagram.com/hello_prachar?igsh=MTZvZDBsemVsN2xq', label: 'Instagram' },
-  { icon: Linkedin, href: 'https://www.linkedin.com/company/helloprachar/', label: 'LinkedIn' },
+  { icon: Instagram, href: '#', label: 'Instagram' },
+  { icon: Linkedin, href: '#', label: 'LinkedIn' },
 ];
 
 const footerVariants = {
@@ -144,11 +144,11 @@ export default function Footer() {
               </li>
               <li className="flex items-center space-x-3">
                 <Phone size={20} className="text-mustard flex-shrink-0" />
-                <span className="text-white/70">+917973825465</span>
+                <span className="text-white/70">+916287658728</span>
               </li>
               <li className="flex items-center space-x-3">
                 <Mail size={20} className="text-mustard flex-shrink-0" />
-                <span className="text-white/70">pracharbusinesss@gmail.com</span>
+                <span className="text-white/70">prachar@gmail.com</span>
               </li>
             </ul>
           </motion.div>
