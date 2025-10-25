@@ -38,10 +38,10 @@ const footerLinks = [
 ];
 
 const socialLinks = [
-  { icon: Facebook, href: '#', label: 'Facebook' },
+  { icon: Facebook, href: 'https://www.facebook.com/share/1KLPiPi2rV/', label: 'Facebook' },
   { icon: Twitter, href: '#', label: 'Twitter' },
-  { icon: Instagram, href: '#', label: 'Instagram' },
-  { icon: Linkedin, href: '#', label: 'LinkedIn' },
+  { icon: Instagram, href: 'https://www.instagram.com/hey_prachar/profilecard/?igsh=OTk5YWhucnBvdzFm', label: 'Instagram' },
+  { icon: Linkedin, href: 'https://www.linkedin.com/company/helloprachar/', label: 'LinkedIn' },
 ];
 
 const footerVariants = {
@@ -136,19 +136,19 @@ export default function Footer() {
             <h3 className="font-bold text-white mb-4">Contact Us</h3>
             <ul className="space-y-4">
               <li className="flex items-start space-x-3">
-                <MapPin size={20} className="text-mustard mt-1 flex-shrink-0" />
+                <MapPin size={20} className="text-yellow-200 mt-1 flex-shrink-0" />
                 <span className="text-white/70">
                   #595, sec 8b, <br />
                   Chandigarh, India<br />
                 </span>
               </li>
               <li className="flex items-center space-x-3">
-                <Phone size={20} className="text-mustard flex-shrink-0" />
-                <span className="text-white/70">+916287658728</span>
+                <Phone size={20} className="text-yellow-200 flex-shrink-0" />
+                <span className="text-white/70">+917973825465</span>
               </li>
               <li className="flex items-center space-x-3">
-                <Mail size={20} className="text-mustard flex-shrink-0" />
-                <span className="text-white/70">prachar@gmail.com</span>
+                <Mail size={20} className="text-yellow-200 flex-shrink-0" />
+                <span className="text-white/70">pracharbusinesss@gmail.com</span>
               </li>
             </ul>
           </motion.div>

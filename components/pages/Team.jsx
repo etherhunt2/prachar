@@ -99,7 +99,7 @@ const TeamPage = () => {
                                 return (
                                     <FloatingIcon
                                         key={item.key}
-                                        icon={<Icon className="w-full h-full text-mustard/50" />}
+                                        icon={<Icon className="w-full h-full text-yellow-300/50" />}
                                         size={item.size}
                                         delay={item.delay}
                                         duration={item.duration}
@@ -159,7 +159,7 @@ const TeamPage = () => {
                                 className="w-full md:w-1/2 flex flex-col justify-center p-6 bg-black/50 rounded-xl border border-white/5"
                             >
                                 <h3 className="text-2xl font-bold text-white mb-3">Aditi Sharma</h3>
-                                <p className="text-mustard text-lg mb-4">Co-Founder, Prachar</p>
+                                <p className="text-yellow-400/90 text-lg mb-4">Co-Founder, Prachar</p>
                                 <p className="text-white/70 mb-4">
                                     With over 4 years of experience in client relationship management,
                                     business development, and sales, Aditi Sharma is the driving force behind building
@@ -169,13 +169,13 @@ const TeamPage = () => {
                                     help every business reach the heights it truly deserves.
                                 </p>
                                 <div className="flex gap-4 mt-2">
-                                    <a href="https://www.linkedin.com/in/aditisharma21?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" className="text-mustard hover:text-white transition-colors">
+                                    <a href="https://www.linkedin.com/in/aditisharma21?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" className="text-yellow-400 hover:text-white transition-colors">
                                         <span className="sr-only">LinkedIn</span>
                                         <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                             <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452z" />
                                         </svg>
                                     </a>
-                                    <a href="https://www.instagram.com/aditii.sharmaa21?igsh=MWMybmt0NzdoNG1lYQ==" className="text-mustard hover:text-white transition-colors">
+                                    <a href="https://www.instagram.com/aditii.sharmaa21?igsh=MWMybmt0NzdoNG1lYQ==" className="text-yellow-400 hover:text-white transition-colors">
                                         <span className="sr-only">Instagram</span>
                                         <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                             <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5A4.25 4.25 0 0 0 20.5 16.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5zm4.25 3.25a5.25 5.25 0 1 1 0 10.5 5.25 5.25 0 0 1 0-10.5zm0 1.5a3.75 3.75 0 1 0 0 7.5 3.75 3.75 0 0 0 0-7.5zm5.25.75a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
@@ -215,7 +215,7 @@ const TeamPage = () => {
                                 className="w-full md:w-1/2 flex flex-col justify-center p-6 bg-black/50 rounded-xl border border-white/5"
                             >
                                 <h3 className="text-2xl font-bold text-white mb-3">Rahul Kareer</h3>
-                                <p className="text-mustard text-lg mb-4">Co-Founder, Prachar</p>
+                                <p className="text-yellow-400 text-lg mb-4">Co-Founder, Prachar</p>
                                 <p className="text-white/70 mb-4">
                                     With over 4.5 years of experience in design, Rahul Kareer brings a deep understanding of motion graphics and
                                     CGI editing to the table. As the Co-Founder of Prachar, he has helped numerous brands enhance their digital
@@ -223,13 +223,13 @@ const TeamPage = () => {
                                     stands out with a strong visual impact.
                                 </p>
                                 <div className="flex gap-4 mt-2">
-                                    <a href="https://www.linkedin.com/in/rahul-kareer09?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" className="text-mustard hover:text-white transition-colors">
+                                    <a href="https://www.linkedin.com/in/rahul-kareer09?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" className="text-yellow-400 hover:text-white transition-colors">
                                         <span className="sr-only">LinkedIn</span>
                                         <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                             <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452z" />
                                         </svg>
                                     </a>
-                                    <a href="https://www.instagram.com/rahul_kareer08?igsh=MTBndWp0ZnpkOXliNA==" className="text-mustard hover:text-white transition-colors">
+                                    <a href="https://www.instagram.com/rahul_kareer08?igsh=MTBndWp0ZnpkOXliNA==" className="text-yellow-400 hover:text-white transition-colors">
                                         <span className="sr-only">Instagram</span>
                                         <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                             <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5A4.25 4.25 0 0 0 20.5 16.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5zm4.25 3.25a5.25 5.25 0 1 1 0 10.5 5.25 5.25 0 0 1 0-10.5zm0 1.5a3.75 3.75 0 1 0 0 7.5 3.75 3.75 0 0 0 0-7.5zm5.25.75a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />

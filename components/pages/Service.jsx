@@ -32,23 +32,19 @@ const services = [
         features: [
             {
                 title: 'Cinematic Shoots',
-                description: 'We don\'t just film; we direct. Every frame is meticulously planned, every shot a work of art.',
-                icon: 'Rideo'
+                description: 'We don\'t just film; we direct. Every frame is meticulously planned, every shot a work of art.'
             },
             {
                 title: 'Drone Videos',
-                description: 'Aerial shots add drama, perspective, and that undeniable "wow" factor.',
-                icon: 'Drone'
+                description: 'Aerial shots add drama, perspective, and that undeniable "wow" factor.'
             },
             {
                 title: 'Influencer Shoots',
-                description: 'We ensure seamless, authentic storytelling that engages audiences.',
-                icon: 'Influencer'
+                description: 'We ensure seamless, authentic storytelling that engages audiences.'
             },
             {
                 title: 'Corporate & Product Films',
-                description: 'Your brand\'s message, minus the corporate jargon. We make professionalism look effortlessly cool.',
-                icon: 'Corporate'
+                description: 'Your brand\'s message, minus the corporate jargon. We make professionalism look effortlessly cool.'
             }
         ],
         conclusion: "At Prachar, we don't just create videos; we create experiences. Great visuals aren't just seen—they're felt.",
@@ -65,23 +61,19 @@ const services = [
         features: [
             {
                 title: 'Cinematic Photography',
-                description: 'We create visuals that feel alive, not just staged photos.',
-                icon: 'Camero'
+                description: 'We create visuals that feel alive, not just staged photos.'
             },
             {
                 title: 'Product Photography',
-                description: 'If your product doesn\'t look good, it doesn\'t sell. We make it irresistible.',
-                icon: 'Product'
+                description: 'If your product doesn\'t look good, it doesn\'t sell. We make it irresistible.'
             },
             {
                 title: 'Corporate Shoots',
-                description: 'From powerful headshots to office culture photography, we help businesses put their best face forward.',
-                icon: 'Corporate'
+                description: 'From powerful headshots to office culture photography, we help businesses put their best face forward.'
             },
             {
                 title: 'Event Coverage',
-                description: 'We capture the moments that matter at high-energy concerts, grand launches, and intimate gatherings.',
-                icon: 'Event'
+                description: 'We capture the moments that matter at high-energy concerts, grand launches, and intimate gatherings.'
             }
         ],
         conclusion: "In a world flooded with images, only the truly remarkable ones stand out. We create photos that work, not just sit pretty.",
@@ -98,23 +90,19 @@ const services = [
         features: [
             {
                 title: 'On-Page SEO',
-                description: 'We optimize content, meta tags, and site structure to speak Google\'s language.',
-                icon: 'Searcher'
+                description: 'We optimize content, meta tags, and site structure to speak Google\'s language.'
             },
             {
                 title: 'Off-Page SEO',
-                description: 'We build authority with high-quality, relevant backlinks that boost credibility.',
-                icon: 'Link'
+                description: 'We build authority with high-quality, relevant backlinks that boost credibility.'
             },
             {
                 title: 'Technical SEO',
-                description: 'We optimize site speed, mobile responsiveness, and technical performance.',
-                icon: 'Gear'
+                description: 'We optimize site speed, mobile responsiveness, and technical performance.'
             },
             {
                 title: 'Local SEO',
-                description: 'We optimize for Google My Business and location-based keywords to dominate local searches.',
-                icon: 'Location'
+                description: 'We optimize for Google My Business and location-based keywords to dominate local searches.'
             }
         ],
         conclusion: "We deliver sustainable, long-term results that keep your business ahead. If your brand isn't on the first page, does it even exist?",
@@ -131,23 +119,19 @@ const services = [
         features: [
             {
                 title: 'Content Strategy',
-                description: 'Viral-worthy reels, engaging carousels, compelling captions that click.',
-                icon: 'Content'
+                description: 'Viral-worthy reels, engaging carousels, compelling captions that click.'
             },
             {
                 title: 'Account Growth',
-                description: 'Real engagement strategies that build communities, not just followers.',
-                icon: 'Growth'
+                description: 'Real engagement strategies that build communities, not just followers.'
             },
             {
                 title: 'Influencer Marketing',
-                description: 'Authentic partnerships with the right voices to amplify your brand.',
-                icon: 'Influencer'
+                description: 'Authentic partnerships with the right voices to amplify your brand.'
             },
             {
                 title: 'Ad Campaigns',
-                description: 'Paid strategies that ensure your budget gets real ROI across platforms.',
-                icon: 'ads'
+                description: 'Paid strategies that ensure your budget gets real ROI across platforms.'
             }
         ],
         conclusion: "In a world of endless scrolling, only the smartest brands get noticed. We position you for success across all platforms.",
@@ -164,23 +148,19 @@ const services = [
         features: [
             {
                 title: 'Meta Ads',
-                description: 'Thumb-stopping visuals with razor-sharp targeting for Facebook/Instagram.',
-                icon: 'Meta'
+                description: 'Thumb-stopping visuals with razor-sharp targeting for Facebook/Instagram.'
             },
             {
                 title: 'Google Ads',
-                description: 'High-performing search, display, and YouTube ads that bring conversions.',
-                icon: 'Google'
+                description: 'High-performing search, display, and YouTube ads that bring conversions.'
             },
             {
                 title: 'A/B Testing',
-                description: 'Real-time testing and constant optimization based on data, not guesses.',
-                icon: 'Test'
+                description: 'Real-time testing and constant optimization based on data, not guesses.'
             },
             {
                 title: 'ROI-Focused Budgeting',
-                description: 'We ensure maximum return on every rupee spent, outperforming competitors.',
-                icon: 'Budget'
+                description: 'We ensure maximum return on every rupee spent, outperforming competitors.'
             }
         ],
         conclusion: "We don't just run ads—we engineer success. Let's make your budget work like never before.",
@@ -197,23 +177,19 @@ const services = [
         features: [
             {
                 title: 'Profile Optimization',
-                description: 'Fine-tuned details with compelling descriptions that make people click.',
-                icon: 'Profile'
+                description: 'Fine-tuned details with compelling descriptions that make people click.'
             },
             {
                 title: 'Review Management',
-                description: 'Get more positive reviews and respond smartly to build trust and sales.',
-                icon: 'Review'
+                description: 'Get more positive reviews and respond smartly to build trust and sales.'
             },
             {
                 title: 'Local SEO Boost',
-                description: 'Dominate "near me" searches with optimized keywords and location signals.',
-                icon: 'Location'
+                description: 'Dominate "near me" searches with optimized keywords and location signals.'
             },
             {
                 title: 'Performance Tracking',
-                description: 'Data-driven insights on who\'s searching, calling, and visiting.',
-                icon: 'Analytics'
+                description: 'Data-driven insights on who\'s searching, calling, and visiting.'
             }
         ],
         conclusion: "We turn GMB into a lead-generating powerhouse. If you're not showing up where it matters, your competition is winning.",
@@ -230,23 +206,19 @@ const services = [
         features: [
             {
                 title: 'Website Content',
-                description: 'Compelling copy that turns your 24/7 sales machine into a conversion powerhouse.',
-                icon: 'Website'
+                description: 'Compelling copy that turns your 24/7 sales machine into a conversion powerhouse.'
             },
             {
                 title: 'Ad Copy',
-                description: 'Short, sharp, and persuasive content designed to get clicks and conversions.',
-                icon: 'ads'
+                description: 'Short, sharp, and persuasive content designed to get clicks and conversions.'
             },
             {
                 title: 'Brand Storytelling',
-                description: 'We bring out your unique voice so people buy into your story, not just products.',
-                icon: 'Story'
+                description: 'We bring out your unique voice so people buy into your story, not just products.'
             },
             {
                 title: 'SEO Content',
-                description: 'Strategically placed keywords that rank higher without sounding robotic.',
-                icon: 'SEOs'
+                description: 'Strategically placed keywords that rank higher without sounding robotic.'
             }
         ],
         conclusion: "In a world full of noise, only the best words get heard. Let's write your success story.",
@@ -263,23 +235,19 @@ const services = [
         features: [
             {
                 title: 'Brand Identity',
-                description: 'Logos, color palettes, and typography that define your personality.',
-                icon: 'Brand'
+                description: 'Logos, color palettes, and typography that define your personality.'
             },
             {
                 title: 'Motion Graphics',
-                description: 'Animated logos, explainer videos, and motion ads that captivate.',
-                icon: 'Motion'
+                description: 'Animated logos, explainer videos, and motion ads that captivate.'
             },
             {
                 title: 'UI/UX Design',
-                description: 'Clean, engaging website graphics that enhance user experience.',
-                icon: 'Design'
+                description: 'Clean, engaging website graphics that enhance user experience.'
             },
             {
                 title: 'Ad Creatives',
-                description: 'Scroll-stopping Meta ads and eye-catching Google banners that sell.',
-                icon: 'ads'
+                description: 'Scroll-stopping Meta ads and eye-catching Google banners that sell.'
             }
         ],
         conclusion: "We don't do generic. Every design is crafted with strategy and impact in mind. Let's make your brand unforgettable.",
@@ -296,23 +264,19 @@ const services = [
         features: [
             {
                 title: 'Corporate Brochures',
-                description: 'Sleek or bold designs that reflect your brand personality.',
-                icon: 'Corporate'
+                description: 'Sleek or bold designs that reflect your brand personality.'
             },
             {
                 title: 'Product Catalogs',
-                description: 'Clean layouts with stunning visuals that showcase products irresistibly.',
-                icon: 'Product'
+                description: 'Clean layouts with stunning visuals that showcase products irresistibly.'
             },
             {
                 title: 'Strategic Layouts',
-                description: 'Content placement that guides, informs, and convinces readers.',
-                icon: 'Layout'
+                description: 'Content placement that guides, informs, and convinces readers.'
             },
             {
                 title: 'Print-Ready Files',
-                description: 'High-quality tailored designs that make your materials pop.',
-                icon: 'Print'
+                description: 'High-quality tailored designs that make your materials pop.'
             }
         ],
         conclusion: "We design materials that create impact, not collect dust. Let's design something worth keeping.",
@@ -329,23 +293,19 @@ const services = [
         features: [
             {
                 title: 'Brand Activations',
-                description: 'Flawless execution with maximum brand impact at every touchpoint.',
-                icon: 'Brand'
+                description: 'Flawless execution with maximum brand impact at every touchpoint.'
             },
             {
                 title: 'Live Coverage',
-                description: 'Professional photography/videography to turn moments into content gold.',
-                icon: 'camera'
+                description: 'Professional photography/videography to turn moments into content gold.'
             },
             {
                 title: 'End-to-End Planning',
-                description: 'Venue selection, theme design, decor, logistics - we handle it all.',
-                icon: 'Planning'
+                description: 'Venue selection, theme design, decor, logistics - we handle it all.'
             },
             {
                 title: 'Targeted Promotion',
-                description: 'Digital and offline strategies to get the right audience in the room.',
-                icon: 'Promotion'
+                description: 'Digital and offline strategies to get the right audience in the room.'
             }
         ],
         conclusion: "An event should tell a story and strengthen your brand. Let's make magic happen.",
@@ -362,23 +322,19 @@ const services = [
         features: [
             {
                 title: 'Media Relations',
-                description: 'Connections with top journalists and media houses for impactful features.',
-                icon: 'Media'
+                description: 'Connections with top journalists and media houses for impactful features.'
             },
             {
                 title: 'Press Conferences',
-                description: 'Orchestrated events that make people talk about your announcements.',
-                icon: 'Press'
+                description: 'Orchestrated events that make people talk about your announcements.'
             },
             {
                 title: 'Crisis Management',
-                description: 'Control narratives and turn setbacks into opportunities.',
-                icon: 'Crisis'
+                description: 'Control narratives and turn setbacks into opportunities.'
             },
             {
                 title: 'Influencer Collaborations',
-                description: 'Authentic partnerships that drive real engagement and trust.',
-                icon: 'Influencer'
+                description: 'Authentic partnerships that drive real engagement and trust.'
             }
         ],
         conclusion: "We create PR that makes an impact and drives results. Let's make headlines together.",
@@ -395,23 +351,19 @@ const services = [
         features: [
             {
                 title: 'Custom Development',
-                description: 'Tailored solutions from corporate sites to eCommerce stores.',
-                icon: 'Code'
+                description: 'Tailored solutions from corporate sites to eCommerce stores.'
             },
             {
                 title: 'Lightning Speed',
-                description: 'Optimized performance that keeps visitors engaged.',
-                icon: 'Speed'
+                description: 'Optimized performance that keeps visitors engaged.'
             },
             {
                 title: 'UI/UX Design',
-                description: 'Intuitive interfaces that guide users toward action.',
-                icon: 'Design'
+                description: 'Intuitive interfaces that guide users toward action.'
             },
             {
                 title: 'E-Commerce',
-                description: 'Shopify, WooCommerce, Magento - we build platforms that sell.',
-                icon: 'Cart'
+                description: 'Shopify, WooCommerce, Magento - we build platforms that sell.'
             }
         ],
         conclusion: "We create digital experiences that work for your business. Let's build something extraordinary.",
@@ -428,27 +380,72 @@ const services = [
         features: [
             {
                 title: 'Strategic Partnerships',
-                description: 'Matches with the right influencers for authentic impact.',
-                icon: 'Handshake'
+                description: 'Matches with the right influencers for authentic impact.'
             },
             {
                 title: 'Performance Tracking',
-                description: 'Focus on lead generation and conversions, not just likes.',
-                icon: 'Analytics'
+                description: 'Focus on lead generation and conversions, not just likes.'
             },
             {
                 title: 'Content Creation',
-                description: 'Scroll-stopping posts that fit seamlessly into feeds.',
-                icon: 'Content'
+                description: 'Scroll-stopping posts that fit seamlessly into feeds.'
             },
             {
                 title: 'Multi-Platform',
-                description: 'Reels, YouTube integrations, Twitter trends - we cover all bases.',
-                icon: 'Social'
+                description: 'Reels, YouTube integrations, Twitter trends - we cover all bases.'
             }
         ],
         conclusion: "Influencer marketing should drive sales, not just hype. Let's make your brand the next big thing.",
         image: '/Images/services/influencer.png'
+    },
+    {
+        id: 'linkedin-marketing',
+        title: 'LinkedIn Sales Navigator – Lead Generation',
+        subtitle: 'Finding leads is easy. Finding the right leads is where the game changes.',
+        description: [
+            "With LinkedIn Sales Navigator, we identify, connect, and engage with your ideal prospects using advanced filters, smart targeting, and personalized outreach.",
+            "The result? A steady pipeline of high-quality leads that convert."
+        ],
+        features: [
+            {
+                title: 'Curated Lead Lists',
+                description: 'We don’t just scrape data — we handpick prospects that fit your business goals.'
+            },
+            {
+                title: 'Personalized Outreach',
+                description: 'Messages that don’t feel like spam. Authentic conversations that open doors.'
+            },
+            {
+                title: 'Pipeline Building',
+                description: 'Consistent lead flow designed to fuel your sales growth.'
+            }
+        ],
+        // conclusion: "Influencer marketing should drive sales, not just hype. Let's make your brand the next big thing.",
+        image: '/Images/services/linkedin.jpeg'
+    },
+    {
+        id: 'marketing-strategy',
+        title: 'Strategic Marketing – Build Strategy for a Startup',
+        subtitle: 'Great startups don’t just launch — they scale with strategy.',
+        description: [
+            "We design end-to-end marketing roadmaps that position your brand, capture attention, and generate traction in competitive markets. From day one, you’ll know where to play and how to win."
+        ],
+        features: [
+            {
+                title: 'Market Research & Analysis',
+                description: 'Know your competitors, audience, and opportunities before you invest.'
+            },
+            {
+                title: 'Brand Positioning',
+                description: 'We craft your brand’s voice, story, and identity to stand out.'
+            },
+            {
+                title: 'Growth Roadmap',
+                description: 'From campaigns to conversions, a step-by-step plan to take you from idea to impact.'
+            }
+        ],
+        // conclusion: "Influencer marketing should drive sales, not just hype. Let's make your brand the next big thing.",
+        image: '/Images/services/strategy-business.jpg'
     }
 ];
 
@@ -528,11 +525,11 @@ const Service = () => {
                 </div>
             </div>
 
-            <div className="bg-gray-900/30 p-4 rounded-xl border border-white/5">
+            {service.conclusion? <div className="bg-gray-900/30 p-4 rounded-xl border border-white/5">
                 <p className="text-white/80 text-center">
                     {service.conclusion}
                 </p>
-            </div>
+            </div>:""}
         </div>
     );
 
@@ -584,6 +581,7 @@ const Service = () => {
                         <ThreeDText
                             elementType="h1"
                             className="text-5xl md:text-7xl font-extrabold mb-6"
+                            gradient={false}
                         >
                             Our Services
                         </ThreeDText>

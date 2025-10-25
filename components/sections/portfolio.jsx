@@ -96,6 +96,36 @@ const PortfolioGallery = () => {
             title: `Swaadika`,
             desc: `We helped Swaadika create a unique logo, develop their branding, and menu design a complete visual identity that reflects their values and vision. Our work ensures they stand out with a cohesive and professional look across all platforms.`,
             link: `https://www.instagram.com/swaadika_mohali?igsh=MTNrY3gzdXhyY3N3`
+        },
+        {
+            id: 10,
+            src: '/portfolio/anm.jpeg',
+            alt: "A&M Prints",
+            width: 800,
+            height: 600,
+            title: `A&M Prints`,
+            desc: `At A&M Prints, we manage complete PR and influencer marketing campaigns to boost brand presence and engagement. Our team also handles end-to-end Meta ad setup, targeting, and performance management. Through a mix of organic and paid strategies, we help A\&M Prints reach the right audience and grow consistently across digital platforms.`,
+            link: `https://www.instagram.com/anmprints_official/`
+        },
+        {
+            id: 11,
+            src: '/portfolio/utility.jpeg',
+            alt: "Utility Engineers",
+            width: 800,
+            height: 600,
+            title: `Utility Engineers`,
+            desc: `Utility Engineers delivers innovative solutions for infrastructure and utilities. To amplify their brand presence, Prachar supports them with end-to-end video creation — from shoots and editing to content creator collaborations. This ensures Utility Engineers showcase their expertise and projects with engaging, impactful content that builds trust and visibility among their audience.`,
+            link: `https://www.instagram.com/utility_engineers/`
+        },
+        {
+            id: 12,
+            src: '/portfolio/nileson.jpeg',
+            alt: "Nileson Consulting Pvt. Ltd.",
+            width: 800,
+            height: 600,
+            title: `Nileson Consulting Pvt. Ltd.`,
+            desc: `Nileson Consulting Pvt. Ltd. is an IT company offering Oracle Cloud, Salesforce, custom software, and IT staffing solutions. They empower businesses with technology-driven transformation. Prachar supports Nileson with lead generation, digital growth, strategies, and business scaling.`,
+            link: `https://www.instagram.com/nilesonitconsulting/`
         }
     ];
 
@@ -126,6 +156,84 @@ const PortfolioGallery = () => {
                         >
                             Our Clients
                         </ThreeDText>
+                    </motion.div>
+
+                    {/* Highlighted Clients */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 50 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8, ease: "easeOut" }}
+                        className="grid grid-cols-1 md:grid-cols-12 gap-6 items-center bg-gradient-to-r from-gray-900 to-gray-800 p-6 rounded-xl shadow-2xl mb-10"
+                        whileHover={{
+                            scale: 1.02,
+                            boxShadow: "0 20px 25px -5px rgba(234, 179, 8, 0.3), 0 10px 10px -5px rgba(234, 179, 8, 0.1)"
+                        }}
+                    >
+                        {/* Logo Column */}
+                        <motion.div
+                            className="md:col-span-3 relative aspect-square overflow-hidden rounded-lg"
+                            whileHover={{
+                                scale: 1.05,
+                                rotateY: 10,
+                                boxShadow: "0 0 15px rgba(234, 179, 8, 0.7)"
+                            }}
+                            transition={{ type: "spring", stiffness: 300 }}
+                        >
+                            <img
+                                src='/portfolio/special.jpg'
+                                alt='demo'
+                                className="w-full h-full object-cover"
+                            />
+                        </motion.div>
+
+                        {/* Description Column (double width) */}
+                        <motion.div
+                            className="md:col-span-6 p-4"
+                            initial={{ x: -20 }}
+                            whileInView={{ x: 0 }}
+                            transition={{ delay: 0.2 }}
+                        >
+                            <motion.h3
+                                className="text-4xl font-bold mb-4 text-white"
+                                whileHover={{ scale: 1.02 }}
+                            >
+                                BuyDost
+                            </motion.h3>
+                            <motion.p
+                                className="text-white/80"
+                                initial={{ opacity: 0 }}
+                                whileInView={{ opacity: 1 }}
+                                transition={{ delay: 0.4 }}
+                            >
+                                BuyDost is a bold, youth-driven fashion and lifestyle brand designed for the unapologetic spirit of Gen Z. Rooted in humor, relatability, and digital culture, we're more than a clothing label—we're a movement. Our aim is to build a strong community that connects through conversations, content, and culture. From memes to statement pieces, every part of BuyDost is crafted to reflect real youth energy.
+                            </motion.p>
+                        </motion.div>
+
+                        {/* Button Column */}
+                        <motion.div
+                            className="md:col-span-3 flex justify-center"
+                            initial={{ scale: 0.8 }}
+                            whileInView={{ scale: 1 }}
+                            whileHover={{ scale: 1.05 }}
+                            transition={{ type: "spring" }}
+                        >
+                            <motion.a
+                                href='https://www.instagram.com/buydost/'
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="px-8 py-3 bg-yellow-500 text-blue-900 rounded-full font-bold text-lg shadow-lg"
+                                whileHover={{
+                                    scale: 1.1,
+                                    backgroundColor: "#f59e0b",
+                                    boxShadow: "0 0 20px rgba(234, 179, 8, 0.8)"
+                                }}
+                                whileTap={{ scale: 0.95 }}
+                                transition={{ type: "spring", stiffness: 400 }}
+                            >
+                                Visit Site
+                            </motion.a>
+                        </motion.div>
                     </motion.div>
 
                     <div className="grid grid-cols-1 md:grid-cols-4 gap-8">

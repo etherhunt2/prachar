@@ -86,7 +86,7 @@ export default function AboutSection() {
                             return (
                                 <FloatingIcon
                                     key={item.key}
-                                    icon={<Icon className="w-full h-full text-mustard/50" />}
+                                    icon={<Icon className="w-full h-full text-yellow-300/50" />}
                                     size={item.size}
                                     delay={item.delay}
                                     duration={item.duration}
