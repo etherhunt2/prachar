@@ -144,11 +144,11 @@ export default function Footer() {
               </li>
               <li className="flex items-center space-x-3">
                 <Phone size={20} className="text-yellow-200 flex-shrink-0" />
-                <span className="text-white/70">+917973825465</span>
+                <span className="text-white/70">+916287658728</span>
               </li>
               <li className="flex items-center space-x-3">
                 <Mail size={20} className="text-yellow-200 flex-shrink-0" />
-                <span className="text-white/70">pracharbusinesss@gmail.com</span>
+                <span className="text-white/70">sharnagatyogesh2@gmail.com</span>
               </li>
             </ul>
           </motion.div>
