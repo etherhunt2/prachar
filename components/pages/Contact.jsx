@@ -138,7 +138,7 @@ const ContactPage = () => {
                                         </div>
                                     </div>
                                     <a href="mailto:pracharbusinesss@gmail.com" className="text-yellow-400 hover:text-yellow-300 transition-colors">
-                                        pracharbusinesss@gmail.com
+                                        sharnagatyogesh2@gmail.com
                                     </a>
                                 </div>
 
@@ -155,7 +155,7 @@ const ContactPage = () => {
                                             <p className="text-gray-400">Speak directly with our team</p>
                                         </div>
                                     </div>
-                                    <a href="tel:+917973825465" className="text-yellow-400 hover:text-yellow-300 transition-colors">
+                                    <a href="tel:+916287658728" className="text-yellow-400 hover:text-yellow-300 transition-colors">
                                         +91 797 382 5465
                                     </a>
                                 </div>
