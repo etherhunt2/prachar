@@ -50,7 +50,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         {/* Interakt.ai WhatsApp Widget */}
-        <script
+        {/* <script
           dangerouslySetInnerHTML={{
             __html: `
               // Wait 2 seconds, then paste this clean version
@@ -78,7 +78,7 @@ export default function RootLayout({ children }) {
               }, 2000);
             `,
           }}
-        />
+        /> */}
       </head>
       <body>
         <LenisProvider>
