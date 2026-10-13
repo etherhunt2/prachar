@@ -48,9 +48,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head>
+      {/* <head>
         {/* Interakt.ai WhatsApp Widget */}
-        {/* <script
+        <script
           dangerouslySetInnerHTML={{
             __html: `
               // Wait 2 seconds, then paste this clean version
@@ -78,8 +78,8 @@ export default function RootLayout({ children }) {
               }, 2000);
             `,
           }}
-        /> */}
-      </head>
+        />
+      </head> */}
       <body>
         <LenisProvider>
           <div className="flex min-h-screen flex-col">
